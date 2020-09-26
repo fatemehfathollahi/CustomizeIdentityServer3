@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3D3D79FE-D1F6-421B-9BEC-5B783495AE65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Management.Infrastructure.Models</RootNamespace>
+    <AssemblyName>Management.Infrastructure.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Client.cs" />
+    <Compile Include="ClientClaim.cs" />
+    <Compile Include="ClientCorsOrigin.cs" />
+    <Compile Include="ClientCustomGrantType.cs" />
+    <Compile Include="ClientIdPRestriction.cs" />
+    <Compile Include="ClientPostLogoutRedirectUri.cs" />
+    <Compile Include="ClientRedirectUri.cs" />
+    <Compile Include="ClientScope.cs" />
+    <Compile Include="ClientSecret.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClientClaimRepository.cs" />
+    <Compile Include="Repositories\ClientCorsOriginRepository.cs" />
+    <Compile Include="Repositories\ClientCustomGrantTypeRepository.cs" />
+    <Compile Include="Repositories\ClientIdPRestrictionRepository.cs" />
+    <Compile Include="Repositories\ClientPostLogoutRedirectUriRepository.cs" />
+    <Compile Include="Repositories\ClientRedirectUriRepository.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\ClientScopeRepository.cs" />
+    <Compile Include="Repositories\ClientSecretRepository.cs" />
+    <Compile Include="Repositories\PermissionRepository.cs" />
+    <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\ScopeClaimRepository.cs" />
+    <Compile Include="Repositories\ScopeRepository.cs" />
+    <Compile Include="Repositories\ScopeSecretRepository.cs" />
+    <Compile Include="Repositories\UserClaimRepository.cs" />
+    <Compile Include="Repositories\UserLoginRepository.cs" />
+    <Compile Include="Repositories\UserProfileRepository.cs" />
+    <Compile Include="Repositories\UserClientPermissionRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Role.cs" />
+    <Compile Include="Scope.cs" />
+    <Compile Include="ScopeClaim.cs" />
+    <Compile Include="ScopeSecret.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserClaim.cs" />
+    <Compile Include="UserLogin.cs" />
+    <Compile Include="UserClientPermission.cs" />
+    <Compile Include="UserProfile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Core\Framework.Core.Contracts\Framework.Core.Contracts.csproj">
+      <Project>{C463112E-F41E-4F2D-A8F6-8916E80DC98C}</Project>
+      <Name>Framework.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Persistences\Framework.Persistences.Contracts\Framework.Persistences.Contracts.csproj">
+      <Project>{2BB1B7F1-674A-496A-8030-1AA15C8721BF}</Project>
+      <Name>Framework.Persistences.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Persistences\Framework.Persistences.EF\Framework.Persistences.EF.csproj">
+      <Project>{D448869E-19C3-45D4-99C7-1554218B5404}</Project>
+      <Name>Framework.Persistences.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

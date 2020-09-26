@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0F2D49A3-B507-40F4-A949-FE7B5FA05ECF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Management.Infrastructure.Facade</RootNamespace>
+    <AssemblyName>Management.Infrastructure.Facade</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTOModel\ClientClaimDTO.cs" />
+    <Compile Include="DTOModel\ClientCorsOriginDTO.cs" />
+    <Compile Include="DTOModel\ClientCustomGrantTypeDTO.cs" />
+    <Compile Include="DTOModel\ClientListDTO.cs" />
+    <Compile Include="DTOModel\ClientDTO.cs" />
+    <Compile Include="DTOModel\ClientIdPRestrictionDTO.cs" />
+    <Compile Include="DTOModel\ClientPostLogoutRedirectUriDTO.cs" />
+    <Compile Include="DTOModel\ClientRedirectUriDTO.cs" />
+    <Compile Include="DTOModel\ClientScopeDTO.cs" />
+    <Compile Include="DTOModel\ClientSecretDTO.cs" />
+    <Compile Include="DTOModel\PermissionListDTO.cs" />
+    <Compile Include="DTOModel\PermissionDTO.cs" />
+    <Compile Include="DTOModel\RoleDTO.cs" />
+    <Compile Include="DTOModel\ScopeClaimDTO.cs" />
+    <Compile Include="DTOModel\ScopeDTO.cs" />
+    <Compile Include="DTOModel\ScopeSecretDTO.cs" />
+    <Compile Include="DTOModel\UserClaimDTO.cs" />
+    <Compile Include="DTOModel\UserClientPermissionDTO.cs" />
+    <Compile Include="DTOModel\UserListDTO.cs" />
+    <Compile Include="DTOModel\UserDTO.cs" />
+    <Compile Include="DTOModel\UserLoginDTO.cs" />
+    <Compile Include="DTOModel\UserProfileDTO.cs" />
+    <Compile Include="FacadeServices\ClientFacadeService.cs" />
+    <Compile Include="FacadeServices\Contracts\IClientFacadeService.cs" />
+    <Compile Include="FacadeServices\Contracts\IPermissionFacadeService.cs" />
+    <Compile Include="FacadeServices\Contracts\IRoleFacadeService.cs" />
+    <Compile Include="FacadeServices\Contracts\IScopeFacadeService.cs" />
+    <Compile Include="FacadeServices\Contracts\IUserClientPermissionFacadeService.cs" />
+    <Compile Include="FacadeServices\Contracts\IUserFacadeService.cs" />
+    <Compile Include="FacadeServices\PermissionFacadeService.cs" />
+    <Compile Include="FacadeServices\RoleFacadeService.cs" />
+    <Compile Include="FacadeServices\ScopeFacadeService.cs" />
+    <Compile Include="FacadeServices\UserClientPermissionFacadeService.cs" />
+    <Compile Include="FacadeServices\UserFacadeService.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientClaimDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientCorsOriginDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientCustomGrantTypeDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientListDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientIdPRestrictionDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientPostLogoutRedirectUriDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientRedirectUriDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientScopeDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ClientSecretDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\PermissionListDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\PermissionDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\RoleDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ScopeClaimDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ScopeDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\ScopeSecretDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\UserClaimDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\UserClientPermissionDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\UserListDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\UserDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\UserLoginDTOProfile.cs" />
+    <Compile Include="ObjectMapper\DTO\UserProfileDTOProfile.cs" />
+    <Compile Include="ObjectMapper\MapperConfigurations.cs" />
+    <Compile Include="ObjectMapper\Model\ClientClaimProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientCorsOriginProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientCustomGrantTypeProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientIdPRestrictionProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientPostLogoutRedirectUriProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientRedirectUriProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientScopeProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ClientSecretProfile.cs" />
+    <Compile Include="ObjectMapper\Model\PermissionProfile.cs" />
+    <Compile Include="ObjectMapper\Model\RoleProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ScopeClaimProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ScopeProfile.cs" />
+    <Compile Include="ObjectMapper\Model\ScopeSecretProfile.cs" />
+    <Compile Include="ObjectMapper\Model\UserClaimProfile.cs" />
+    <Compile Include="ObjectMapper\Model\UserLoginProfile.cs" />
+    <Compile Include="ObjectMapper\Model\UserClientPermissionProfile.cs" />
+    <Compile Include="ObjectMapper\Model\UserProfile.cs" />
+    <Compile Include="ObjectMapper\Model\UserProfileProfile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\Core\Framework.Core.Contracts\Framework.Core.Contracts.csproj">
+      <Project>{C463112E-F41E-4F2D-A8F6-8916E80DC98C}</Project>
+      <Name>Framework.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\Core\Framework.Core.Security\Framework.Core.Security.csproj">
+      <Project>{607C73EB-093E-4AA4-AA5C-8D48AF356F1F}</Project>
+      <Name>Framework.Core.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Management.Infrastructure.Model\Management.Infrastructure.Models.csproj">
+      <Project>{3d3d79fe-d1f6-421b-9bec-5b783495ae65}</Project>
+      <Name>Management.Infrastructure.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Management.Infrastructure.Service\Management.Infrastructure.Service.csproj">
+      <Project>{84e07fe2-07a3-4bdd-aa4b-24d8d9e9ee54}</Project>
+      <Name>Management.Infrastructure.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

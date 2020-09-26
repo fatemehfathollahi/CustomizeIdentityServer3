@@ -1,0 +1,113 @@
+﻿<div class="row-fluid" style="margin-right: 5px" data-bind="visible:loadingVisible">
+	<i class="ace-icon fa fa-spinner fa-spin blue fa-3x"></i>
+	Loading Component, Please wait ...
+</div>
+
+<form id="UserForm" class="" data-bind="visible:contentVisible">
+	<span style="display:none;font-size:larger;font-weight:bold !important;" data-bind="text:headerText,visible:contentVisible"></span>
+
+	<div class="row-fluid filter-panel" style="margin-right: 5px;display:none;width:100%;"
+		 data-bind="visible:contentVisible">
+		<div class="form-group col-md-4">
+			<label for="UserName">UserName </label>
+			<input type="text" name="UserName" class="form-control"
+				   data-bind="value:userRow.UserName,enable:enabled" maxlength="200">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="PasswordHash">Password </label>
+			<input type="text" name="PasswordHash" class="form-control"
+				   data-bind="value:userRow.PasswordHash,enable:enabled">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="Email">Email </label>
+			<input type="text" name="Email" class="form-control"
+				   data-bind="value:userRow.Email,enable:enabled" maxlength="200">
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-4">
+			<label for="FirstName">FirstName </label>
+			<input type="text" name="FirstName" class="form-control"
+				   data-bind="value:userRow.FirstName,enable:enabled">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="LastName">LastName </label>
+			<input type="text" name="LastName" class="form-control"
+				   data-bind="value:userRow.LastName,enable:enabled">
+		</div>
+        <div class="form-group col-md-4">
+            <label for="NationalCode">National Code </label>
+            <input type="text" name="National Code" class="form-control numericMask"
+                   data-bind="value:userRow.NationalCode,enable:enabled" maxlength="10">
+        </div>
+		<div class="clearfix"></div>
+        <div class="form-group col-md-4">
+            <label for="Mobile">Mobile </label>
+            <input type="text" name="Mobile" class="form-control numericMask"
+                   data-bind="value:userRow.Mobile,enable:enabled" maxlength="14">
+        </div>
+		<div class="form-group col-md-4">
+			<label for="InternalPhone">Internal Phone </label>
+			<input type="text" name="InternalPhone" class="form-control numericMask"
+				   data-bind="value:userRow.InternalPhone,enable:enabled" maxlength="7">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="InternalPhoneCode">Internal Phone Code </label>
+			<input type="text" name="InternalPhoneCode" class="form-control numericMask"
+				   data-bind="value:userRow.InternalPhoneCode,enable:enabled" maxlength="7">
+		</div>
+		<div class="clearfix"></div>
+		<div class="table-header">Permissions</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add Permission"
+			   class="blue purple" data-bind="click:addPermission">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete Permission"
+			   class="blue purple" data-bind="click:deletePermission">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="UserClientPermissionGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:20%;display:none;" class="tableHeaderText-center-align">Client_Id</th>
+					<th style="width:50%;" class="tableHeaderText-center-align">Client Name</th>
+					<th style="width:40%;display:none;" class="tableHeaderText-center-align">Permission Id</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">Permission</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: userRow.UserPermissions">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center" style="display:none;"></td>
+					<td data-bind="text:Client_Id" class="" style="display:none;"></td>
+					<td data-bind="text:Client_Name" class=""></td>
+					<td data-bind="text:Permission_Id" class="" style="display:none;"></td>
+					<td data-bind="text:Permission_Name" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="clearfix"></div>
+	</div>
+</form>
+<div class="clearfix"></div>
+<div class="modal-footer" style="display: none;" data-bind="visible:contentVisible">
+	<div class="bootstrap-dialog-footer">
+		<div class="bootstrap-dialog-footer-buttons">
+			<button class="btn btn-primary" data-bind="click:dialogOkClick,visible:saveButtonVisible,enable:enableButton">
+				<span class="bootstrap-dialog-button-icon fa fa-check"></span>
+				Ok
+			</button>
+			<button class="btn btn-default btn-small" data-bind="click:cancelClick,enable:enableButton">
+				<span class="bootstrap-dialog-button-icon fa fa-times"></span>
+				Exit
+			</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+﻿<div class="row-fluid" style="margin-right: 5px" data-bind="visible:loadingVisible">
+	<i class="ace-icon fa fa-spinner fa-spin blue fa-3x"></i>
+	Please Wait ...
+</div>
+<form id="PostLogoutForm" class="modal-body" data-bind="visible:contentVisible,enable:enabled">
+	<div class="clearfix"></div>
+	<h3 id="title"></h3>
+	<div class="row-fluid" style="margin-right: 5px">
+		<div class="form-group col-md-12">
+			<label for="Uri">URI </label>
+			<input type="text" name="Uri" class="form-control"
+				   data-bind="value:postLogoutRow.Uri,enable:enabled" maxlength="200">
+		</div>
+	</div>
+</form>
+<div class="clearfix"></div>
+<div class="modal-footer" style="display: block;" data-bind="visible:contentVisible">
+	<div class="bootstrap-dialog-footer">
+		<div class="bootstrap-dialog-footer-buttons">
+			<button class="btn btn-primary" data-bind="click:dialogOkClick,visible:saveButtonVisible,enable:enableButton"><span class="bootstrap-dialog-button-icon fa fa-check"></span> ok </button>
+			<button class="btn btn-default btn-small" data-bind="click:dialogCancelClick,enable:enableButton"><span class="bootstrap-dialog-button-icon fa fa-times"></span> Exit </button>
+		</div>
+	</div>
+</div>

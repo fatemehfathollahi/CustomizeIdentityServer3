@@ -1,0 +1,70 @@
+﻿<div class="row-fluid" style="margin-right: 5px" data-bind="visible:loadingVisible">
+    <i class="ace-icon fa fa-spinner fa-spin blue fa-3x"></i>
+    Loading Component, Please wait ...
+</div>
+
+<form id="roleForm" class="" data-bind="visible:contentVisible">
+
+    <div class="row-fluid filter-panel" style="margin-right: 5px;display:none;width:100%;"
+         data-bind="visible:contentVisible">
+        <div class="form-group col-md-12">
+            <label for="Name">Name </label>
+            <input type="text" name="Name" class="form-control"
+                   data-bind="value:roleRow.Name,enable:enabled" >
+        </div>
+        <div class="form-group col-md-12">
+            <label for="Description">Description </label>
+            <input type="text" name="Description" class="form-control"
+                   data-bind="value:roleRow.Description,enable:enabled">
+        </div>
+        <br />
+        <div class="table-header">Permissions</div>
+        <div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+            <a style="margin-left:5px" name="" title="Add Permissions"
+               class="blue purple" data-bind="click:addPermissions">
+                <i data-bind="css:addIcon"></i>
+            </a>
+            <span class="ui-separator" style="vertical-align: top;">|</span>
+            <a style="margin-left:5px" name="" title="Delete Permissions"
+               class="blue purple" data-bind="click:deletePermissions">
+                <i data-bind="css:deleteIcon"></i>
+            </a>
+        </div>
+        <table id="permisionGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+            <thead>
+                <tr style="background-color:#22beef">
+                    <th class="center" style="width:5%;"></th>
+                    <th style="width:5%;" class="tableHeaderText-center-align">Id</th>
+                    <th style="width:100%;" class="tableHeaderText-center-align">Name</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: roleRow.Permissions">
+                <tr data-bind="attr: { rowId:Id }">
+                    <td class="center">
+                        <input type="checkbox"
+                               data-bind="attr: { value: Id }, checked: selected" />
+                    </td>
+                    <td data-bind="text:Id" class="center"></td>
+                    <td data-bind="text:Name" class=""></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <div class="clearfix"></div>
+    </div>
+</form>
+<div class="clearfix"></div>
+<div class="modal-footer" style="display: none;" data-bind="visible:contentVisible">
+    <div class="bootstrap-dialog-footer">
+        <div class="bootstrap-dialog-footer-buttons">
+            <button class="btn btn-primary" data-bind="click:dialogOkClick,visible:saveButtonVisible,enable:enableButton">
+                <span class="bootstrap-dialog-button-icon fa fa-check"></span>
+                Ok
+            </button>
+            <button class="btn btn-default btn-small" data-bind="click:dialogCancelClick,enable:enableButton">
+                <span class="bootstrap-dialog-button-icon fa fa-times"></span>
+                Exit
+            </button>
+        </div>
+    </div>
+</div>

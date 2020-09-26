@@ -1,0 +1,319 @@
+﻿<div class="row-fluid" style="margin-right: 5px" data-bind="visible:loadingVisible">
+	<i class="ace-icon fa fa-spinner fa-spin blue fa-3x"></i>
+	Loading Component, Please wait ...
+</div>
+
+<form id="clientForm" class="" data-bind="visible:contentVisible">
+	<span style="display:none;font-size:larger;font-weight:bold !important;" data-bind="text:headerText,visible:contentVisible"></span>
+	
+	<div class="row-fluid filter-panel" style="margin-right: 5px;display:none;width:100%;"
+		 data-bind="visible:contentVisible">
+		<div class="well form-group col-md-5" data-bind="fileDrag: clientRow.viewModel.fileData,visible:enabled">
+			<div class="form-group row">
+				<div class="" style="float:right;margin:10px;">
+					<input type="file"
+						   data-bind="fileInput: clientRow.viewModel.fileData, customFileInput: {
+                                  buttonClass: 'btn btn-success',
+                                  fileNameClass: 'disabled form-control',
+                                  onClear: clientRow.viewModel.onClear
+                                }" accept="image/*">
+				</div>
+				<div class="" style="float:left;margin:10px">
+					<div class="" style="float:left;">
+						<img style="height: 125px;width:125px;" class="thumb-file-uploader"
+							 data-bind="attr: { src: clientRow.viewModel.fileData().dataURL }">
+					</div>
+				</div>
+				<span style="color:red;margin-right:15px;" data-bind="visible:clientRow.viewModel.visibleError"> Maximum length for photo is 1MB</span>
+			</div>
+		</div>
+		<div class="well form-group col-md-5" data-bind="fileDrag: clientRow.viewModel.fileData,visible:enabledShowImage">
+			<div class="" style="float:right;margin:10px;visibility:hidden">
+				<input type="file"
+					   data-bind="fileInput: clientRow.viewModel.fileData, customFileInput: {
+                                  buttonClass: 'btn btn-success',
+                                  fileNameClass: 'disabled form-control',
+                                  onClear: clientRow.viewModel.onClear
+                                }" accept="image/*">
+			</div>
+			<div class="" style="">
+				<div class="" style="float:left;margin:10px">
+					<img style="height: 125px;width:125px;" class="thumb-file-uploader"
+						 data-bind="attr: { src: clientRow.viewModel.fileData().dataURL }">
+				</div>
+			</div>
+			<span style="color:red;margin-right:15px;" data-bind="visible:clientRow.viewModel.visibleError"> Maximum length for photo is 1MB</span>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-4">
+			<label for="ClientId">ClientId </label>
+			<input type="text" name="ClientId" class="form-control"
+				   data-bind="value:clientRow.ClientId,enable:enabled" maxlength="200">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="ClientName">ClientName </label>
+			<input type="text" name="ClientName" class="form-control"
+				   data-bind="value:clientRow.ClientName,enable:enabled" maxlength="200">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="ClientName">ClientUri </label>
+			<input type="text" name="ClientUri" class="form-control"
+				   data-bind="value:clientRow.ClientUri,enable:enabled">
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-4">
+			<label for="LogoUri">LogoUri </label>
+			<input type="text" name="LogoUri" class="form-control"
+				   data-bind="value:clientRow.LogoUri,enable:enabled">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="LogoutUri">LogoutUri </label>
+			<input type="text" name="LogoutUri" class="form-control"
+				   data-bind="value:clientRow.LogoutUri,enable:enabled">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="IdentityTokenLifetime">Identity Token Lifetime (Second) </label>
+			<input type="text" name="IdentityTokenLifetime" class="form-control numericMask"
+				   data-bind="value:clientRow.IdentityTokenLifetime,enable:enabled">
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-4">
+			<label for="AccessTokenLifetime">Access Token Lifetime (Second) </label>
+			<input type="text" name="AccessTokenLifetime" class="form-control numericMask"
+				   data-bind="value:clientRow.AccessTokenLifetime,enable:enabled">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="AuthorizationCodeLifetime">Authorization Code Lifetime (Second)</label>
+			<input type="text" name="AuthorizationCodeLifetime" class="form-control numericMask"
+				   data-bind="value:clientRow.AuthorizationCodeLifetime,enable:enabled">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="AbsoluteRefreshTokenLifetime">Absolute Refresh Token Lifetime (Second) </label>
+			<input type="text" name="AbsoluteRefreshTokenLifetime" class="form-control numericMask"
+				   data-bind="value:clientRow.AbsoluteRefreshTokenLifetime,enable:enabled">
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="form-group col-md-4" style="margin-top:25px;">
+			<input name="AllowAccessToAllScopes" type="checkbox" value="msg" data-bind="checked: clientRow.AllowAccessToAllScopes,enable:enabled" />
+			<label for="AllowAccessToAllScopes">Allow Access To All Scopes</label>
+		</div>
+		<div class="form-group col-md-3" style="margin-top:25px;">
+			<input name="Enabled" type="checkbox" value="msg" data-bind="checked: clientRow.Enabled,enable:enabled" />
+			<label for="Enabled">Enabled</label>
+		</div>
+		<div class="clearfix"></div>
+		<div class="clearfix"></div>
+		<br />
+		<div class="table-header">Cors Origins</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add Cors Origins"
+			   class="blue purple" data-bind="click:addCorsOrigins">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete Cors Origins"
+			   class="blue purple" data-bind="click:deleteCorsOrigins">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="corsOriginGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">Origin</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: clientRow.ClientCorsOrigins">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center" style="display:none;"></td>
+					<td data-bind="text:Origin" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<div class="table-header">Client Post Logout Redirect Uri</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add URI"
+			   class="blue purple" data-bind="click:addURI">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete URI"
+			   class="blue purple" data-bind="click:deleteURI">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="URIGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">URI</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: clientRow.ClientPostLogoutRedirectUris">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center" style="display:none;"></td>
+					<td data-bind="text:Uri" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<div class="table-header">Client Redirect Uris</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add Client Redirect URI"
+			   class="blue purple" data-bind="click:addClientURI">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete Client Redirect URI"
+			   class="blue purple" data-bind="click:deleteClientURI">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="ClientRedirectURIGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">URI</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: clientRow.ClientRedirectUris">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center"style="display:none;"></td>
+					<td data-bind="text:Uri" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<div class="table-header">Client Scopes</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add Client Scope"
+			   class="blue purple" data-bind="click:addClientScops">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete Client Scope"
+			   class="blue purple" data-bind="click:deleteClientScops">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="ClientScopsGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">Scope</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: clientRow.ClientScopes">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center" style="display:none;"></td>
+					<td data-bind="text:Scope" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<div class="table-header">Client Secrets</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add Client Secret"
+			   class="blue purple" data-bind="click:addClientSecrets">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete Client Secret"
+			   class="blue purple" data-bind="click:deleteClientSecrets">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="ClientSecretsGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:40%;" class="tableHeaderText-center-align">Value</th>
+					<th style="width:40%;display:none;" class="tableHeaderText-center-align">Type</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">Description</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: clientRow.ClientSecrets">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center" style="display:none;"></td>
+					<td data-bind="text:Value" class=""></td>
+					<td data-bind="text:Type" class="" style="display:none;"></td>
+					<td data-bind="text:Description" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+        <br />
+        <div class="table-header">Permission</div>
+        <div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+            <a style="margin-left:5px" name="" title="Add Permission"
+               class="blue purple" data-bind="click:addPermissions">
+                <i data-bind="css:addIcon"></i>
+            </a>
+            <span class="ui-separator" style="vertical-align: top;">|</span>
+            <a style="margin-left:5px" name="" title="Delete Permission"
+               class="blue purple" data-bind="click:deletePermissions">
+                <i data-bind="css:deleteIcon"></i>
+            </a>
+        </div>
+        <table id="PermissionGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+            <thead>
+                <tr style="background-color:#22beef">
+                    <th class="center" style="width:5%;"></th>
+                    <th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+                    <th style="width:100%;" class="tableHeaderText-center-align">Name</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: clientRow.Permissions">
+                <tr data-bind="attr: { rowId:Id }">
+                    <td class="center">
+                        <input type="checkbox"
+                               data-bind="attr: { value: Id }, checked: selected" />
+                    </td>
+                    <td data-bind="text:Id" class="center" style="display:none;"></td>
+                    <td data-bind="text:Name" class=""></td>
+                </tr>
+            </tbody>
+        </table>
+	</div>
+</form>
+<div class="clearfix"></div>
+<div class="modal-footer" style="display: none;" data-bind="visible:contentVisible">
+	<div class="bootstrap-dialog-footer">
+		<div class="bootstrap-dialog-footer-buttons">
+			<button class="btn btn-primary" data-bind="click:dialogOkClick,visible:saveButtonVisible,enable:enableButton">
+				<span class="bootstrap-dialog-button-icon fa fa-check"></span>
+				Ok
+			</button>
+			<button class="btn btn-default btn-small" data-bind="click:cancelClick,enable:enableButton">
+				<span class="bootstrap-dialog-button-icon fa fa-times"></span>
+				Exit
+			</button>
+		</div>
+	</div>
+</div>

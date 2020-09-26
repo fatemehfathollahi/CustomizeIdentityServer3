@@ -1,0 +1,17 @@
+﻿<div class="row-fluid" style="float: right; margin-right: 5px" data-bind="visible:!contentVisible">
+	<i class="ace-icon fa fa-spinner fa-spin blue fa-3x"></i>
+	لطفا کمی صبر کنید...
+</div>
+<form id="mealForm" class="modal-body" data-bind="visible:contentVisible,enable:enabled">
+	<div class="clearfix"></div>
+	<h4 id="title" data-bind="text:message"></h4>
+</form>
+<div class="clearfix"></div>
+<div class="modal-footer" style="display: block;" data-bind="visible:contentVisible">
+	<div class="bootstrap-dialog-footer">
+		<div class="bootstrap-dialog-footer-buttons">
+			<button class="btn btn-primary" data-bind="click:dialogOkClick,visible:saveButtonVisible,enable:enableButton"><span class="bootstrap-dialog-button-icon fa fa-check"></span> Ok </button>
+			<button class="btn btn-default btn-small" data-bind="click:dialogCancelClick,enable:enableButton"><span class="bootstrap-dialog-button-icon fa fa-times"></span> Exit </button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,153 @@
+﻿<div class="row-fluid" style="margin-right: 5px" data-bind="visible:loadingVisible">
+	<i class="ace-icon fa fa-spinner fa-spin blue fa-3x"></i>
+	Loading Component, Please wait ...
+</div>
+
+<form id="scopeForm" class="" data-bind="visible:contentVisible">
+	<span style="display:none;font-size:larger;font-weight:bold !important;" data-bind="text:headerText,visible:contentVisible"></span>
+
+	<div class="row-fluid filter-panel" style="margin-right: 5px;display:none;width:100%;"
+		 data-bind="visible:contentVisible">
+		<div class="form-group col-md-4">
+			<label for="Name">Name </label>
+			<input type="text" name="Name" class="form-control"
+				   data-bind="value:scopeRow.Name,enable:enabled" maxlength="200">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="DisplayName">Display Name </label>
+			<input type="text" name="DisplayName" class="form-control"
+				   data-bind="value:scopeRow.DisplayName,enable:enabled" maxlength="200">
+		</div>
+		<div class="form-group col-md-4">
+			<label for="Claims Rule">Claims Rule </label>
+			<input type="text" name="ClaimsRule" class="form-control"
+				   data-bind="value:scopeRow.ClaimsRule,enable:enabled">
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-4">
+			<label for="Type">Type </label>
+			<input type="text" name="Type" class="form-control numericMask"
+				   data-bind="value:scopeRow.Type,enable:enabled">
+		</div>
+		<div class="form-group col-md-4" style="margin-top:25px;">
+			<input name="Enabled" type="checkbox" value="msg" data-bind="checked: scopeRow.Enabled,enable:enabled" />
+			<label for="Enabled">Enabled</label>
+		</div>
+		<div class="form-group col-md-4" style="margin-top:25px;">
+			<input name="Required" type="checkbox" value="msg" data-bind="checked: scopeRow.Required,enable:enabled" />
+			<label for="Required">Required</label>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-4" style="margin-top:25px;">
+			<input name="Emphasize" type="checkbox" value="msg" data-bind="checked: scopeRow.Emphasize,enable:enabled" />
+			<label for="Emphasize">Emphasize</label>
+		</div>
+		<div class="form-group col-md-4" style="margin-top:25px;">
+			<input name="IncludeAllClaimsForUser" type="checkbox" value="msg" data-bind="checked: scopeRow.IncludeAllClaimsForUser,enable:enabled" />
+			<label for="IncludeAllClaimsForUser">Include All Claims For User</label>
+		</div>
+		<div class="form-group col-md-4" style="margin-top:25px;">
+			<input name="ShowInDiscoveryDocument" type="checkbox" value="msg" data-bind="checked: scopeRow.ShowInDiscoveryDocument,enable:enabled" />
+			<label for="ShowInDiscoveryDocument">Show In Discovery Document</label>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-4" style="margin-top:25px;">
+			<input name="AllowUnrestrictedIntrospection" type="checkbox" value="msg" data-bind="checked: scopeRow.AllowUnrestrictedIntrospection,enable:enabled" />
+			<label for="AllowUnrestrictedIntrospection">Allow Unrestricted Intro spection</label>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form-group col-md-12">
+			<label for="Description">Description </label>
+			<textarea class="form-control" rows="3" name="Description" id="Address"
+					  placeholder="" data-bind="value:scopeRow.Description,enable:enabled"></textarea>
+		</div>
+		<br />
+		<div class="table-header">Scope Claim</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add Scope Claim"
+			   class="blue purple" data-bind="click:addScopeClaim">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete Scope Claim"
+			   class="blue purple" data-bind="click:deleteScopeClaim">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="scopeClaimGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:45%;" class="tableHeaderText-center-align">Name</th>
+					<th style="width:40%;" class="tableHeaderText-center-align">Description</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">Include IdToken</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: scopeRow.ScopeClaims">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center" style="display:none;"></td>
+					<td data-bind="text:Name" class=""></td>
+					<td data-bind="text:Description" class=""></td>
+					<td data-bind="text:AlwaysIncludeInIdToken" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<br />
+		<div class="table-header">Scope Secrets</div>
+		<div class="hidden-phone visible-desktop action-buttons crudGroupButton" id="" data-bind="visible:enabled">
+			<a style="margin-left:5px" name="" title="Add Scope Secret"
+			   class="blue purple" data-bind="click:addScopeSecrets">
+				<i data-bind="css:addIcon"></i>
+			</a>
+			<span class="ui-separator" style="vertical-align: top;">|</span>
+			<a style="margin-left:5px" name="" title="Delete Scope Secret"
+			   class="blue purple" data-bind="click:deleteScopeSecrets">
+				<i data-bind="css:deleteIcon"></i>
+			</a>
+		</div>
+		<table id="scopeSecretsGrid" style="margin:0;margin-bottom:10px !important;" class="table table-bordered table-striped">
+			<thead>
+				<tr style="background-color:#22beef">
+					<th class="center" style="width:5%;"></th>
+					<th style="width:5%;display:none;" class="tableHeaderText-center-align">Id</th>
+					<th style="width:40%;" class="tableHeaderText-center-align">Value</th>
+					<th style="width:40%;" class="tableHeaderText-center-align">Type</th>
+					<th style="width:100%;" class="tableHeaderText-center-align">Description</th>
+				</tr>
+			</thead>
+			<tbody data-bind="foreach: scopeRow.ScopeSecrets">
+				<tr data-bind="attr: { rowId:Id }">
+					<td class="center">
+						<input type="checkbox"
+							   data-bind="attr: { value: Id }, checked: selected" />
+					</td>
+					<td data-bind="text:Id" class="center" style="display:none;"></td>
+					<td data-bind="text:Value" class=""></td>
+					<td data-bind="text:Type" class=""></td>
+					<td data-bind="text:Description" class=""></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="clearfix"></div>
+	</div>
+</form>
+<div class="clearfix"></div>
+<div class="modal-footer" style="display: none;" data-bind="visible:contentVisible">
+	<div class="bootstrap-dialog-footer">
+		<div class="bootstrap-dialog-footer-buttons">
+			<button class="btn btn-primary" data-bind="click:dialogOkClick,visible:saveButtonVisible,enable:enableButton">
+				<span class="bootstrap-dialog-button-icon fa fa-check"></span>
+				Ok
+			</button>
+			<button class="btn btn-default btn-small" data-bind="click:cancelClick,enable:enableButton">
+				<span class="bootstrap-dialog-button-icon fa fa-times"></span>
+				Exit
+			</button>
+		</div>
+	</div>
+</div>

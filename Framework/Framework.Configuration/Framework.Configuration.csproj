@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E50DD98-E101-4C2B-86D3-35F952424C77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Framework.Configuration</RootNamespace>
+    <AssemblyName>Framework.Configuration</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Windsor.4.1.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <Reference Include="LiteDB, Version=4.1.4.0, Culture=neutral, PublicKeyToken=4ee40123013c9f27, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\LiteDB.4.1.4\lib\net40\LiteDB.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap.cs" />
+    <Compile Include="Core\CoreConfig.cs" />
+    <Compile Include="Crosscutting\CrosscuttingConfig.cs" />
+    <Compile Include="Persistence\PersistenceConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Framework.Core.Common\Framework.Core.Common.csproj">
+      <Project>{2b9d355a-cdf6-43ba-a8d6-ac6665bfc32e}</Project>
+      <Name>Framework.Core.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Framework.Core.Contracts\Framework.Core.Contracts.csproj">
+      <Project>{c463112e-f41e-4f2d-a8f6-8916e80dc98c}</Project>
+      <Name>Framework.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Framework.Core.Exception\Framework.Core.Exception.csproj">
+      <Project>{4fab8c52-db78-4557-9bda-ed196e4fca98}</Project>
+      <Name>Framework.Core.Exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Framework.Core.Log\Framework.Core.Log.csproj">
+      <Project>{3dd8957f-93b3-4a07-ac47-3b08b60129fe}</Project>
+      <Name>Framework.Core.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Crosscutting\Framework.Crosscutting.Contracts\Framework.Crosscutting.Contracts.csproj">
+      <Project>{2f15c7ec-620c-4190-a7eb-d1a8b93cc7fe}</Project>
+      <Name>Framework.Crosscutting.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Crosscutting\Framework.Crosscutting.Exceptions\Framework.Crosscutting.Exceptions.csproj">
+      <Project>{ba78295e-f102-402a-8519-aef42d4b748c}</Project>
+      <Name>Framework.Crosscutting.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Crosscutting\Framework.Crosscutting.Transactions\Framework.Crosscutting.Transactions.csproj">
+      <Project>{6cf504f0-7d69-44ce-a69e-34ddd0cfb44f}</Project>
+      <Name>Framework.Crosscutting.Transactions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistences\Framework.Persistences.Contracts\Framework.Persistences.Contracts.csproj">
+      <Project>{2BB1B7F1-674A-496A-8030-1AA15C8721BF}</Project>
+      <Name>Framework.Persistences.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistences\Framework.Persistences.EF\Framework.Persistences.EF.csproj">
+      <Project>{d448869e-19c3-45d4-99c7-1554218b5404}</Project>
+      <Name>Framework.Persistences.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,42 @@
+﻿<div class="row-fluid" style="float: right; margin-right: 5px" data-bind="visible:loadingVisible">
+	<i class="ace-icon fa fa-spinner fa-spin blue fa-3x"></i>
+	Please wait...
+</div>
+<div style="overflow-y:auto;"
+	 data-bind="style:{height:tableHeight}">
+	<table id="PermissionListGrid" style="margin:0px;display:none;"
+		   class="table table-bordered table-striped" data-bind="visible:contentVisible">
+		<thead>
+			<tr style="background-color:#22beef">
+				<th style="width:5%;"></th>
+				<th style="display:none;">Id</th>
+				<th style="width:20%;display:none;">Client_Id</th>
+				<th style="width:50%;">Client Name</th>
+				<th style="width:100%;display:none;">Permission Id</th>
+				<th style="width:100%;">Permission Name</th>
+			</tr>
+		</thead>
+		<tbody data-bind="foreach: permissionList">
+			<tr data-bind="attr: { rowId:Id }">
+				<td class="center" data-bind="">
+					<input type="checkbox"
+						   data-bind="attr: { value: Id }, checked: selected" />
+				</td>
+				<td data-bind="text: Id" style="display:none"></td>
+				<td data-bind="text:Client_Id" style="display:none"></td>
+				<td data-bind="text:Client_Name"></td>
+				<td data-bind="text:Permission_Id" style="display:none"></td>
+				<td data-bind="text:Permission_Name"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="clearfix"></div>
+<div class="modal-footer" style="display: block;" data-bind="visible:contentVisible">
+	<div class="bootstrap-dialog-footer">
+		<div class="bootstrap-dialog-footer-buttons">
+			<button class="btn btn-primary" data-bind="click:dialogOkClick,visible:saveButtonVisible,enable:enableButton"><span class="bootstrap-dialog-button-icon fa fa-check"></span> Ok </button>
+			<button class="btn btn-default btn-small" data-bind="click:dialogCancelClick,enable:enableButton"><span class="bootstrap-dialog-button-icon fa fa-times"></span> Exit </button>
+		</div>
+	</div>
+</div>
