@@ -22,3 +22,8 @@ W:\DanaSelf\Management_Prj\Management\Framework\Persistences\Framework.Persisten
 W:\DanaSelf\Management_Prj\Management\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.csproj.CoreCompileInputs.cache
 W:\DanaSelf\Management_Prj\Management\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.dll
 W:\DanaSelf\Management_Prj\Management\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\bin\Debug\Framework.Persistences.Contracts.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\bin\Debug\Framework.Persistences.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.pdb

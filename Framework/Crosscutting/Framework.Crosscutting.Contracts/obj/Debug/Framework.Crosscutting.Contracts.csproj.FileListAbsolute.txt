@@ -42,3 +42,14 @@ W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutt
 W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csproj.CopyComplete
 W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.dll
 W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Framework.Crosscutting.Contracts.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Framework.Crosscutting.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Core.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Windsor.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Core.xml
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Windsor.xml
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csproj.CopyComplete
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csprojAssemblyReference.cache

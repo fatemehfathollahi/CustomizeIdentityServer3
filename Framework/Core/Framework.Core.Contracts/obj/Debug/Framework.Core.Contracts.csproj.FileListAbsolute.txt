@@ -34,3 +34,12 @@ W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Contracts\ob
 W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csproj.CopyComplete
 W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.dll
 W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Core.Contracts.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Core.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Persistences.Contracts.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Persistences.Contracts.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csprojAssemblyReference.cache
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csproj.CopyComplete
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.pdb

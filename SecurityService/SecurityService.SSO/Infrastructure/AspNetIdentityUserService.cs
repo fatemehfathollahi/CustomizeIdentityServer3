@@ -1,6 +1,7 @@
 ﻿using IdentityModel;
 using IdentityServer3.Core.Extensions;
 using IdentityServer3.Core.Models;
+using IdentityServer3.Core.Services;
 using IdentityServer3.Core.Services.Default;
 using Microsoft.AspNet.Identity;
 using SecurityService.Infrastructure.Data;
@@ -26,9 +27,14 @@ namespace SecurityService.SSO.Infrastructure
 
 		protected readonly Func<string, TKey> ConvertSubjectToKey;
 
-		public AspNetIdentityUserService(Microsoft.AspNet.Identity.UserManager<TUser, TKey> userManager, Func<string, TKey> parseSubject = null)
+        private readonly OwinEnvironmentService _owinEnv;
+
+        public AspNetIdentityUserService(Microsoft.AspNet.Identity.UserManager<TUser, TKey> userManager,
+            OwinEnvironmentService env,//add fathollahi
+            Func<string, TKey> parseSubject = null)
 		{
-			this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+            _owinEnv = env;//add fathollahi
+            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
 
 			if (parseSubject != null)
 			{
@@ -243,9 +249,29 @@ namespace SecurityService.SSO.Infrastructure
 			return Task.FromResult<AuthenticateResult>(null);
 		}
 
-		public override async Task AuthenticateLocalAsync(LocalAuthenticationContext ctx)
+        public static Dictionary<string, int> CaptchaStorage = new Dictionary<string, int>();
+        public override async Task AuthenticateLocalAsync(LocalAuthenticationContext ctx)
 		{
-			string username = ctx.UserName;
+           
+            var requestContext = (System.Web.Routing.RequestContext)_owinEnv.Environment["System.Web.Routing.RequestContext"];
+
+           
+            var enteredCaptcha = 0;
+            int.TryParse(requestContext.HttpContext.Request.Form["CaptchaUserInput"], out enteredCaptcha);//captcha
+
+            var requestId = requestContext.HttpContext.Request.Params["signin"];
+            var serverCaptcha = CaptchaStorage.FirstOrDefault(a => a.Key == requestId).Value;
+            if (requestId != null) CaptchaStorage.Remove(requestId);
+
+            if (serverCaptcha != enteredCaptcha)
+            {
+                ctx.AuthenticateResult = new AuthenticateResult("کد امنیتی اشتباه است.");
+                return;
+            }
+
+           //.......
+
+            string username = ctx.UserName;
 			string password = ctx.Password;
 			SignInMessage message = ctx.SignInMessage;
 
