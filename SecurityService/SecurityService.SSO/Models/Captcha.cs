@@ -18,9 +18,9 @@ namespace SecurityService.SSO.Models
         public int Width { get; set; }
         public int Height { get; set; }
 
-        public ControllerContext Context { get; set; }
+        public HttpContextBase Context { get; set; }
 
-        public Captcha(int _length, int _width, int _height, ControllerContext _context)
+        public Captcha(int _length, int _width, int _height, HttpContextBase _context)
         {
             Length = _length;
             Width = _width;
@@ -28,7 +28,7 @@ namespace SecurityService.SSO.Models
             Context = _context;
         }
 
-        public Captcha(ControllerContext _context) : this(_length: 0, _width: 0, _height: 0, _context: _context)
+        public Captcha(HttpContextBase _context) : this(_length: 0, _width: 0, _height: 0, _context: _context)
         {
             //default constructor
         }
@@ -43,13 +43,7 @@ namespace SecurityService.SSO.Models
 
             //Font which will be used to create captcha
             Font objFont = new Font(FontFamilySelector(), 18, FontStyle.Bold);
-            //
-            var salt = CreateSalt();
-            var query = HttpContext.Current.Request.UrlReferrer?.Query;
-            var requestId = query?.Substring(8, query.Length - 8) ?? "";
-            IdentityUserService.CaptchaStorage.Remove(requestId);
-            IdentityUserService.CaptchaStorage.Add(requestId, salt);
-            //
+           
             HatchBrush hatchBrush = new HatchBrush(
                 RandomHatchStyle(),
                 Color.LightGray,
@@ -92,7 +86,13 @@ namespace SecurityService.SSO.Models
             //Session.Add("randomStr", randomstr_char_arr.ToString());
 
             string captchaString = new string(randomstr_char_arr);
-            Context.HttpContext.Session["Captcha"] = captchaString.ToLower();
+            Context.Session["Captcha"] = captchaString.ToLower();
+
+            
+            var query = HttpContext.Current.Request.UrlReferrer?.Query;
+            var requestId = query?.Substring(8, query.Length - 8) ?? "";
+            IdentityUserService.CaptchaStorage.Remove(requestId);
+            IdentityUserService.CaptchaStorage.Add(requestId, captchaString.ToLower());
 
 
             //in order to return image without saving ion disk we need to return image inside memory 
@@ -110,12 +110,7 @@ namespace SecurityService.SSO.Models
             return byteArray;
         }
 
-        private int CreateSalt()
-        {
-            var random = new Random();
-            return random.Next(1000, 9999);
-        }
-
+      
 
         private string FontFamilySelector()
         {

@@ -12,6 +12,7 @@ using System.Configuration;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Web;
 using Constants = IdentityServer3.Core.Constants;
 
 namespace SecurityService.SSO.Infrastructure
@@ -249,15 +250,16 @@ namespace SecurityService.SSO.Infrastructure
 			return Task.FromResult<AuthenticateResult>(null);
 		}
 
-        public static Dictionary<string, int> CaptchaStorage = new Dictionary<string, int>();
+        public static Dictionary<string, string> CaptchaStorage = new Dictionary<string, string>();
         public override async Task AuthenticateLocalAsync(LocalAuthenticationContext ctx)
 		{
            
             var requestContext = (System.Web.Routing.RequestContext)_owinEnv.Environment["System.Web.Routing.RequestContext"];
-
+          var ss=  HttpContext.Current.Session;
            
-            var enteredCaptcha = 0;
-            int.TryParse(requestContext.HttpContext.Request.Form["CaptchaUserInput"], out enteredCaptcha);//captcha
+            var enteredCaptcha = "";
+             enteredCaptcha = requestContext.HttpContext.Request.Form["CaptchaUserInput"];
+           
 
             var requestId = requestContext.HttpContext.Request.Params["signin"];
             var serverCaptcha = CaptchaStorage.FirstOrDefault(a => a.Key == requestId).Value;

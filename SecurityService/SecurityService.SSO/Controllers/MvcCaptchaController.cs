@@ -20,7 +20,7 @@ namespace SecurityService.SSO.Controllers
         public ActionResult Index(string CaptchaUserInput)
         {
             var resultStr = string.Empty;
-            var captchaStr = ControllerContext.HttpContext.Session["Captcha"];
+            var captchaStr = this.HttpContext.Session["Captcha"]; //ControllerContext.HttpContext.Session["Captcha"];
             CaptchaUserInput = CaptchaUserInput.ToLower();
             if (String.Equals(captchaStr, CaptchaUserInput))
             {
@@ -36,7 +36,7 @@ namespace SecurityService.SSO.Controllers
 
         public ActionResult GenerateCaptcha()
         {
-            Captcha captcha = new Captcha(6, 200, 100, ControllerContext);
+            Captcha captcha = new Captcha(6, 200, 100, HttpContext);
             return File(captcha.create_captcha(), "image/jpeg");
         }
     }
