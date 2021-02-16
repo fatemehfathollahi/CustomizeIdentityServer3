@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
@@ -26,9 +27,8 @@ namespace SecurityService.SSO.Controllers
         [HttpPost]
         public async Task<ActionResult> FoundUser(RecoverPassModel model)
         {
-            model.NationalCode = model.NationalCode;
-            model.Username = model.Username;
-
+            model.Mobile = model.Mobile;
+          
             //var exists = await _studentService.GetForgetPassword(model.NationalCode, model.Username);
 
             //if (exists.Email.IsNullOrEmpty() && exists.Mobile.IsNullOrEmpty())
@@ -53,45 +53,54 @@ namespace SecurityService.SSO.Controllers
         [HttpPost]
         public async Task<ActionResult> RecoverCode(RecoverPassModel model)
         {
-            model.FullEmail = model.FullEmail;
-            model.FullMobile = model.FullMobile;
-            model.Username = model.Username;
-            var result = "";
-            if (model.SendEmail && model.FullEmail.Length < 5)
+            if (!ModelState.IsValid)
             {
-                result = "ایمیل خود را به طور کامل وارد نمایید.";
-            }
-            else if (model.SendSms && model.FullMobile.Length != 11)
-            {
-                result = "شماره همراه خود را به طور کامل وارد نمایید.";
-            }
-            else
-            {
-               // result = await _service.GetSendEmailOrSms(model.SendEmail ? model.FullEmail : "", model.SendSms ? model.FullMobile : "", model.NationalCode, model.Username, Request.UserHostAddress);
-            }
-            model.Message = result;
-            model.MessageColor = "callout-danger";
-
-            if (result != "")
-            {
-                model.FullEmail = "";
-                model.FullMobile = "";
-                model.Step = 1;
-                return View("Index", model);
+                return JavaScript(script: "alert('اطلاعات مورد نیاز را وارد کنید');");
             }
 
-            model.Message = "کد بازیابی رمز عبور برای شما ارسال شد.";
-            model.MessageColor = "callout-success";
-            model.Step = 2;
+          //  var smsService = new SmsService();
+          //  var response = smsService.SendSms(input);
+
+          //  return JavaScript(script: "alert('" + response.message + "');");
+            //model.FullEmail = model.FullEmail;
+            //model.FullMobile = model.FullMobile;
+            //model.Username = model.Username;
+            //var result = "";
+            //if (model.SendEmail && model.FullEmail.Length < 5)
+            //{
+            //    result = "ایمیل خود را به طور کامل وارد نمایید.";
+            //}
+            //else if (model.SendSms && model.FullMobile.Length != 11)
+            //{
+            //    result = "شماره همراه خود را به طور کامل وارد نمایید.";
+            //}
+            //else
+            //{
+            //   // result = await _service.GetSendEmailOrSms(model.SendEmail ? model.FullEmail : "", model.SendSms ? model.FullMobile : "", model.NationalCode, model.Username, Request.UserHostAddress);
+            //}
+            //model.Message = result;
+            //model.MessageColor = "callout-danger";
+
+            //if (result != "")
+            //{
+            //    model.FullEmail = "";
+            //    model.FullMobile = "";
+            //    model.Step = 1;
+            //    return View("Index", model);
+            //}
+
+            //model.Message = "کد بازیابی رمز عبور برای شما ارسال شد.";
+            //model.MessageColor = "callout-success";
+            //model.Step = 2;
             return View("Index", model);
         }
 
         [HttpPost]
         public async Task<ActionResult> Verification(RecoverPassModel model)
         {
-            model.Username = model.Username;
-            model.RecoverCode = model.RecoverCode;
-            //var result = await _service.VerifyRecoveCode(model.Username, model.RecoverCode);
+            //model.Username = model.Username;
+            //model.RecoverCode = model.RecoverCode;
+            ////var result = await _service.VerifyRecoveCode(model.Username, model.RecoverCode);
             //model.Message = result;
             //model.MessageColor = "callout-danger";
 
@@ -110,9 +119,9 @@ namespace SecurityService.SSO.Controllers
         [HttpPost]
         public async Task<ActionResult> SetNewPassword(RecoverPassModel model)
         {
-            model.Username = model.Username;
-            model.Password = model.Password;
-            model.RePassword = model.RePassword;
+            //model.Username = model.Username;
+            //model.Password = model.Password;
+            //model.RePassword = model.RePassword;
             //var result = await _service.SetNewPassword(model.Username, model.Password, model.RePassword);
             //model.Message = result;
             //model.MessageColor = "callout-danger";
@@ -128,5 +137,18 @@ namespace SecurityService.SSO.Controllers
             //model.Step = 4;
             return View("Index", model);
         }
+
+        public string CreatePassword(int length)
+        {
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            StringBuilder res = new StringBuilder();
+            Random rnd = new Random();
+            while (0 < length--)
+            {
+                res.Append(valid[rnd.Next(valid.Length)]);
+            }
+            return res.ToString();
+        }
+
     }
 }

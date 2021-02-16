@@ -277,7 +277,9 @@
     <Compile Include="Models\RecoverPassModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\MvcViewService.cs" />
+    <Compile Include="Services\SmsService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils\JsonResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
@@ -355,6 +357,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\RecoverPassword\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -378,7 +381,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\MvcCaptcha\" />
-    <Folder Include="Views\RecoverPassword\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
