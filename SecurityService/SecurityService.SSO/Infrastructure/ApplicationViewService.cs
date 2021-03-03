@@ -1,4 +1,5 @@
-﻿using IdentityServer3.Core.Models;
+﻿using IdentityServer3.Core.Configuration;
+using IdentityServer3.Core.Models;
 using IdentityServer3.Core.Services;
 using IdentityServer3.Core.Validation;
 using IdentityServer3.Core.ViewModels;
@@ -24,8 +25,22 @@ namespace SecurityService.SSO.Infrastructure
 		{
 			Client client = await clientStore.FindClientByIdAsync(message.ClientId);
 			string name = client != null ? client.ClientName : null;
-           // var newmodel = new LoginModel();
+            // var newmodel = new LoginModel();
             //return await Render(newmodel, "login", name);
+
+            model.AdditionalLinks = new List<LoginPageLink>()
+    {
+        new LoginPageLink()
+        {
+            Text = "Reset password",
+            Href = "logout"
+        },
+        new LoginPageLink()
+        {
+            Text = "Register",
+            Href = "register"
+        }
+    };
             return await Render(model, "login", name);
 		}
 
@@ -33,6 +48,7 @@ namespace SecurityService.SSO.Infrastructure
 		{
 			return Render(model, "logout");
 		}
+
 
 		public Task<Stream> LoggedOut(LoggedOutViewModel model, SignOutMessage message)
 		{

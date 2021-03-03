@@ -38,7 +38,7 @@ namespace SecurityService.SSO.Controllers
             gfxCaptchaImage.Clear(Color.White);
 
             var salt = CreateSalt();
-          //  StoreSalt(salt);
+            StoreSalt(salt.ToString());
             
 
             var randomString = "          " + salt;
@@ -148,12 +148,12 @@ namespace SecurityService.SSO.Controllers
             } 
         }
 
-        private void StoreSalt(int salt)
+        private void StoreSalt(string salt)
         {
             var query = HttpContext.Current.Request.UrlReferrer?.Query;
             var requestId = query?.Substring(8, query.Length - 8) ?? "";
-           // IdentityUserService.CaptchaStorage.Remove(requestId);
-           // IdentityUserService.CaptchaStorage.Add(requestId, salt);
+           IdentityUserService.CaptchaStorage.Remove(requestId);
+           IdentityUserService.CaptchaStorage.Add(requestId, salt);
         }
 
         private int CreateSalt()

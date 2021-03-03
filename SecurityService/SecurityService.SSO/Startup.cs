@@ -17,6 +17,7 @@ using System.Web.Routing;
 using System.Web.Mvc;
 using System.Web.Http;
 using SecurityService.SSO.App_Start;
+using System.Collections.Generic;
 
 namespace SecurityService.SSO
 {
@@ -78,14 +79,14 @@ namespace SecurityService.SSO
             //});
             #endregion
             #region IdentityService Configuration
-
+           
             app.Map("/core", identity =>
             {
                 IdentityServerServiceFactory idSvrFactory = IdentityServiceFactory.Configure(strConnectionString);
 
                 idSvrFactory.ViewService =
-                new Registration<IViewService, MvcViewService<LogonWorkflowController>>();
-              // new Registration<IViewService>(typeof(ApplicationViewService));
+              new Registration<IViewService, MvcViewService<LogonWorkflowController>>();
+             // new Registration<IViewService>(typeof(ApplicationViewService));
                 idSvrFactory.CorsPolicyService =
                     new Registration<ICorsPolicyService>(new DefaultCorsPolicyService { AllowAll = true });
 
@@ -99,8 +100,21 @@ namespace SecurityService.SSO
                 idSvrFactory.Register(new Registration<HttpServerUtilityBase>(resolver => resolver.Resolve<HttpContextBase>().Server));
                 idSvrFactory.Register(new Registration<HttpSessionStateBase>(resolver => resolver.Resolve<HttpContextBase>().Session));
 
+                //AuthenticationOptions authenticationOptions = new AuthenticationOptions
+                //{
+                //    LoginPageLinks = new List<LoginPageLink>()
+                //  {
+                //   new LoginPageLink()
+                //   {
+                //       Href = "resetpassword",
+                //       Text = "Reset Your Password",
+                //       Type = "resetPassword"
+                //   }
+                //   }
+                //};
                 IdentityServerOptions options = new IdentityServerOptions
                 {
+                    
                     RequireSsl = false,
                     SiteName = "IdentityServer",
                     SigningCertificate = Certificate.LoadCertificate(),

@@ -63,6 +63,12 @@
       <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Fluentx, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Fluentx.2.0.4\lib\Fluentx.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluentx.Mvc, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Fluentx.Mvc.1.0.4\lib\Fluentx.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
       <Private>True</Private>
@@ -200,6 +206,7 @@
     <Content Include="Content\app\login.html" />
     <Content Include="Content\app\logout.html" />
     <Content Include="Content\app\permissions.html" />
+    <Content Include="Content\app\resetpassword.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -273,6 +280,7 @@
     <Compile Include="Infrastructure\Configuration\Certificate.cs" />
     <Compile Include="Infrastructure\Configuration\Clients.cs" />
     <Compile Include="Infrastructure\Configuration\Scopes.cs" />
+    <Compile Include="Infrastructure\RecoveryPassService.cs" />
     <Compile Include="Models\Captcha.cs" />
     <Compile Include="Models\RecoverPassModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

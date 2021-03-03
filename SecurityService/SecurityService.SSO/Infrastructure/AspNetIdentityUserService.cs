@@ -24,7 +24,7 @@ namespace SecurityService.SSO.Infrastructure
 		public string DisplayNameClaimType { get; set; }
 		public bool EnableSecurityStamp { get; set; }
 
-		protected readonly UserManager<TUser, TKey> userManager;
+		public static UserManager<TUser, TKey> userManager;
 
 		protected readonly Func<string, TKey> ConvertSubjectToKey;
 
@@ -35,7 +35,7 @@ namespace SecurityService.SSO.Infrastructure
             Func<string, TKey> parseSubject = null)
 		{
             _owinEnv = env;//add fathollahi
-            this.userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
+           userManager = userManager ?? throw new ArgumentNullException(nameof(userManager));
 
 			if (parseSubject != null)
 			{
@@ -240,7 +240,7 @@ namespace SecurityService.SSO.Infrastructure
 			return user.UserName;
 		}
 
-		protected virtual async Task<TUser> FindUserAsync(string username)
+		public virtual async Task<TUser> FindUserAsync(string username)
 		{
 			return await userManager.FindByNameAsync(username);
 		}
@@ -251,6 +251,7 @@ namespace SecurityService.SSO.Infrastructure
 		}
 
         public static Dictionary<string, string> CaptchaStorage = new Dictionary<string, string>();
+       
         public override async Task AuthenticateLocalAsync(LocalAuthenticationContext ctx)
 		{
            
@@ -270,7 +271,11 @@ namespace SecurityService.SSO.Infrastructure
                 ctx.AuthenticateResult = new AuthenticateResult("کد امنیتی اشتباه است.");
                 return;
             }
-
+            if(ctx.UserName == null)
+            {
+                ctx.AuthenticateResult = new AuthenticateResult("نام کاربری را وارد نمایید.");
+                return;
+            }
            //.......
 
             string username = ctx.UserName;
@@ -529,5 +534,44 @@ namespace SecurityService.SSO.Infrastructure
 				ctx.IsActive = true;
 			}
 		}
-	}
+
+      
+        //public virtual async Task<IActionResult> ResetPassword(ResetPasswordModel model)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
+        //    try
+        //    {
+        //        if (model is null)
+        //            return Error("No data found!");
+
+
+        //        var user = await _userManager.FindByIdAsync(AppCommon.ToString(GetUserId()));
+        //        if (user == null)
+        //            return Error("No user found!");
+
+        //        Microsoft.AspNetCore.Identity.SignInResult checkOldPassword =
+        //            await _signInManager.PasswordSignInAsync(user.UserName, model.OldPassword, false, false);
+
+        //        if (!checkOldPassword.Succeeded)
+        //            return Error("Old password does not matched.");
+
+        //        string resetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+        //        if (string.IsNullOrEmpty(resetToken))
+        //            return Error("Error while generating reset token.");
+
+        //        var result = await _userManager.ResetPasswordAsync(user, resetToken, model.Password);
+
+        //        if (result.Succeeded)
+        //            return Result();
+        //        else
+        //            return Error();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return Error(ex);
+        //    }
+        //}
+
+    }
 }

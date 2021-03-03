@@ -60,6 +60,7 @@
                                                             <strong>ذخیره اطلاعات ورود</strong>
                                                         </label>
                                                     </div>
+
                                                     <div class="input-group" ng-if="havecaptcha!=0" ng-class="{ 'has-error' : form.Captcha.$invalid && form.Captcha.$dirty }">
                                                         <div class="input-group-btn" style="border: 0 !important">
                                                             <img id="captcha-image" ng-src="{{imageUrl}}" />
@@ -71,22 +72,41 @@
                                                             </button>
                                                         </div>
                                                     </div>
+
+                                                    <!--<div class="input-group" ng-if="havecaptcha!=0" ng-class="{ 'has-error' : form.Captcha.$invalid && form.Captcha.$dirty }">
+        <div class="input-group-btn" style="border: 0 !important">
+            <img id="captcha-image" ng-src="{{imageUrl}}" />
+        </div>
+        <input type="text" id="Captcha" name="Captcha" maxlength="10" class="form-control" ng-disabled="alertmessage" required autocomplete="off">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="reload()" title="کد امنیتی جدید">
+                <i class="fa fa-refresh"></i>
+            </button>
+        </div>
+    </div>-->
                                                     <!--<div class="form-group">
 
-                                                        <div class="form-group block input-icon input-icon-left">
-                                                            <input required name="captcha" type="text" class="form-control" placeholder="کپچا" ng-model="model.captcha" maxlength="100">
-                                                            <i class="fa fa-user"></i>
-                                                        </div>
-                                                        <input type="button" value="" id="refresh" />
-                                                        <img alt="Captcha" id="imgcpatcha"  src="../images/Notification.png" style="" />
+        <div class="form-group block input-icon input-icon-left">
+            <input required name="captcha" type="text" class="form-control" placeholder="کپچا" ng-model="model.captcha" maxlength="100">
+            <i class="fa fa-user"></i>
+        </div>
+        <input type="button" value="" id="refresh" />
+        <img alt="Captcha" id="imgcpatcha"  src="../images/Notification.png" style="" />
 
-                                                    </div>-->
+    </div>-->
+
+
+
                                                     <div class="form-group">
                                                         <button class="btn width-35 pull-left btn btn-small btn-success" data-loading-text="درحال پردازش" ng-disabled="form.$invalid">ورود</button>
                                                     </div>
-                                                    <div class="col-lg-12" style="padding-top: 10px;padding-bottom: 10px">
-                                                        <a href="/RecoverPassword">بازیابی رمز عبور</a>
-                                                    </div>
+                                                    <ul class="list-unstyled">
+                                                        <li ng-repeat="link in model.additionalLinks"><a ng-href="{{link.href}}">{{link.text}}</a></li>
+                                                    </ul>
+                                                    <!--<div class="col-lg-12" style="padding-top: 10px;padding-bottom: 10px">
+
+        <a href="/RecoverPassword">بازیابی رمز عبور</a>
+    </div>-->
                                                 </fieldset>
                                             </form>
                                         </div>

@@ -534,8 +534,6 @@ W:\DanaSelf\Management_Prj\Management\SecurityService\SecurityService.SSO\obj\De
 W:\DanaSelf\Management_Prj\Management\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.csproj.CopyComplete
 W:\DanaSelf\Management_Prj\Management\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.dll
 W:\DanaSelf\Management_Prj\Management\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.pdb
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\VBCSCompiler.exe
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\SecurityService.SSO.dll.config
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\SecurityService.SSO.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\SecurityService.SSO.pdb
@@ -550,6 +548,7 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.CSharp.Core.targets
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
@@ -582,6 +581,7 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\vbc.exe
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\vbc.exe.config
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\vbc.rsp
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\VBCSCompiler.exe
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\AntiXssLibrary.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\AutoMapper.dll
@@ -596,7 +596,9 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Host.HttpListener.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Hosting.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Security.Cookies.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Security.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Security.OpenIdConnect.dll
@@ -614,6 +616,7 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.ValueTuple.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Helpers.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.Owin.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.WebHost.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Mvc.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Razor.dll
@@ -641,7 +644,9 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.xml
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Host.HttpListener.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Hosting.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Security.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Security.OpenIdConnect.xml
@@ -655,6 +660,7 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.ValueTuple.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Helpers.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.xml
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.Owin.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.WebHost.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Mvc.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Razor.xml
@@ -668,9 +674,7 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.pdb
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Host.HttpListener.dll
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Hosting.dll
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.Owin.dll
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Host.HttpListener.xml
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Microsoft.Owin.Hosting.xml
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\System.Web.Http.Owin.xml
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.Mvc.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.xml
+C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.Mvc.xml

@@ -115,6 +115,7 @@
     <Reference Include="Microsoft.Owin.Security.OpenIdConnect, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.Security.OpenIdConnect.3.0.1\lib\net45\Microsoft.Owin.Security.OpenIdConnect.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -932,12 +933,16 @@
     <Compile Include="Configurations\ControllersInstaller.cs" />
     <Compile Include="Configurations\IocContainer.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\RecoveryPasswordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UserProfileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\PasswordModel.cs" />
+    <Compile Include="Models\RecoveryPassModel.cs" />
+    <Compile Include="Models\SmsModel.cs" />
+    <Compile Include="Models\SmsSettingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -945,6 +950,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Utility\SmsService.cs" />
+    <Compile Include="Configurations\SmsSetting.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -1185,6 +1192,9 @@
     <Content Include="Views\UserProfile\ChangePassword.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Shared\_LayoutSecond.cshtml" />
+    <Content Include="Views\RecoveryPassword\Succefull.cshtml" />
+    <Content Include="Views\RecoveryPassword\RecoverPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,6 +1,7 @@
 ﻿using IdentityServer3.Core.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -12,6 +13,7 @@ namespace SecurityService.SSO.Models
         //public string NationalCode { get; set; }
         //public string Username { get; set; }
         //public string Email { get; set; }
+        [Required(ErrorMessage = "Mobile Number is Required")]
         public string Mobile { get; set; }
         //public string FullMobile { get; set; }
         //public string FullEmail { get; set; }
