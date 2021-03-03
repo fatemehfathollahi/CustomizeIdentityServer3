@@ -84,9 +84,15 @@ namespace SecurityService.SSO
             {
                 IdentityServerServiceFactory idSvrFactory = IdentityServiceFactory.Configure(strConnectionString);
 
+
+                //config view -- fathollahi
                 idSvrFactory.ViewService =
-              new Registration<IViewService, MvcViewService<LogonWorkflowController>>();
-             // new Registration<IViewService>(typeof(ApplicationViewService));
+              new Registration<IViewService, MvcViewService<LogonWorkflowController>>(); // use mvc view  
+             // new Registration<IViewService>(typeof(ApplicationViewService));  // use angular view - if want to use this view comment top line and uncomment this view
+
+
+
+
                 idSvrFactory.CorsPolicyService =
                     new Registration<ICorsPolicyService>(new DefaultCorsPolicyService { AllowAll = true });
 
