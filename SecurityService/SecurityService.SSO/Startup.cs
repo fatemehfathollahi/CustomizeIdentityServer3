@@ -87,8 +87,8 @@ namespace SecurityService.SSO
 
                 //config view -- fathollahi
                 idSvrFactory.ViewService =
-              new Registration<IViewService, MvcViewService<LogonWorkflowController>>(); // use mvc view  
-             // new Registration<IViewService>(typeof(ApplicationViewService));  // use angular view - if want to use this view comment top line and uncomment this view
+             // new Registration<IViewService, MvcViewService<LogonWorkflowController>>(); // use mvc view  
+              new Registration<IViewService>(typeof(ApplicationViewService));  // use angular view - if want to use this view comment top line and uncomment this view
 
 
 
@@ -106,21 +106,21 @@ namespace SecurityService.SSO
                 idSvrFactory.Register(new Registration<HttpServerUtilityBase>(resolver => resolver.Resolve<HttpContextBase>().Server));
                 idSvrFactory.Register(new Registration<HttpSessionStateBase>(resolver => resolver.Resolve<HttpContextBase>().Session));
 
-                //AuthenticationOptions authenticationOptions = new AuthenticationOptions
-                //{
-                //    LoginPageLinks = new List<LoginPageLink>()
-                //  {
-                //   new LoginPageLink()
-                //   {
-                //       Href = "resetpassword",
-                //       Text = "Reset Your Password",
-                //       Type = "resetPassword"
-                //   }
-                //   }
-                //};
+               
                 IdentityServerOptions options = new IdentityServerOptions
                 {
-                    
+                    AuthenticationOptions  = new AuthenticationOptions
+                    {
+                        LoginPageLinks = new List<LoginPageLink>()
+                      {
+                       new LoginPageLink()
+                       {
+                           Href = "resetpassword",
+                           Text = "Reset Your Password",
+                           Type = "resetPassword"
+                       }
+                       }
+                    },
                     RequireSsl = false,
                     SiteName = "IdentityServer",
                     SigningCertificate = Certificate.LoadCertificate(),

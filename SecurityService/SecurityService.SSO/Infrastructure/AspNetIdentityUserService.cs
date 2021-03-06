@@ -258,24 +258,24 @@ namespace SecurityService.SSO.Infrastructure
             var requestContext = (System.Web.Routing.RequestContext)_owinEnv.Environment["System.Web.Routing.RequestContext"];
           var ss=  HttpContext.Current.Session;
            
-            var enteredCaptcha = "";
-             enteredCaptcha = requestContext.HttpContext.Request.Form["CaptchaUserInput"];
+            //var enteredCaptcha = "";
+            // enteredCaptcha = requestContext.HttpContext.Request.Form["CaptchaUserInput"];
            
 
-            var requestId = requestContext.HttpContext.Request.Params["signin"];
-            var serverCaptcha = CaptchaStorage.FirstOrDefault(a => a.Key == requestId).Value;
-            if (requestId != null) CaptchaStorage.Remove(requestId);
+            //var requestId = requestContext.HttpContext.Request.Params["signin"];
+            //var serverCaptcha = CaptchaStorage.FirstOrDefault(a => a.Key == requestId).Value;
+            //if (requestId != null) CaptchaStorage.Remove(requestId);
 
-            if (serverCaptcha != enteredCaptcha)
-            {
-                ctx.AuthenticateResult = new AuthenticateResult("کد امنیتی اشتباه است.");
-                return;
-            }
-            if(ctx.UserName == null)
-            {
-                ctx.AuthenticateResult = new AuthenticateResult("نام کاربری را وارد نمایید.");
-                return;
-            }
+            //if (serverCaptcha != enteredCaptcha)
+            //{
+            //    ctx.AuthenticateResult = new AuthenticateResult("کد امنیتی اشتباه است.");
+            //    return;
+            //}
+            //if(ctx.UserName == null)
+            //{
+            //    ctx.AuthenticateResult = new AuthenticateResult("نام کاربری را وارد نمایید.");
+            //    return;
+            //}
            //.......
 
             string username = ctx.UserName;

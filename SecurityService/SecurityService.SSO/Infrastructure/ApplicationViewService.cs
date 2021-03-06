@@ -28,19 +28,6 @@ namespace SecurityService.SSO.Infrastructure
             // var newmodel = new LoginModel();
             //return await Render(newmodel, "login", name);
 
-            model.AdditionalLinks = new List<LoginPageLink>()
-    {
-        new LoginPageLink()
-        {
-            Text = "Reset password",
-            Href = "logout"
-        },
-        new LoginPageLink()
-        {
-            Text = "Register",
-            Href = "register"
-        }
-    };
             return await Render(model, "login", name);
 		}
 
