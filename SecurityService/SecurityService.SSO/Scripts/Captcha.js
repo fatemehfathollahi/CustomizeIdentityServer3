@@ -35,4 +35,24 @@
     });
 
 
+    $('#submit_link').click(function () {
+        var userName = $('#username').val();
+            $.ajax({
+                url: '/RecoverPassword/RecoverCode',
+                data: { 'userName': userName },
+                type: "post",
+                cache: false,
+                success: function (rs) {
+                    alert(rs.result);
+                    //  $("#hdnOrigComments").val($('#txtComments').val());
+                    // $('#lblCommentsNotification').text(savingStatus);
+                },
+                error: function (xhr, textStatus, exceptionThrown) {
+                    alert(JSON.parse(xhr.responseText));
+                    //$('#error').text(result.responseText);
+                }
+            });
+     
+    });
+
 })();

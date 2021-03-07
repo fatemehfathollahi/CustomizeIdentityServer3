@@ -9,18 +9,16 @@ namespace SecurityService.SSO.Controllers
 {
     public class MvcCaptchaController : Controller
     {
-
         public ActionResult Index()
         {
             return View();
         }
 
-
         [HttpPost]
         public ActionResult Index(string CaptchaUserInput)
         {
             var resultStr = string.Empty;
-            var captchaStr = this.HttpContext.Session["Captcha"]; //ControllerContext.HttpContext.Session["Captcha"];
+            var captchaStr = this.HttpContext.Session["Captcha"]; 
             CaptchaUserInput = CaptchaUserInput.ToLower();
             if (String.Equals(captchaStr, CaptchaUserInput))
             {

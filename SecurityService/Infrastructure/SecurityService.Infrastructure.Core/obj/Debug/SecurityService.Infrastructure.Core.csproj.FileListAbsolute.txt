@@ -68,3 +68,17 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.pdb
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csprojAssemblyReference.cache
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\SecurityService.Infrastructure.Core.dll.config
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\SecurityService.Infrastructure.Core.dll
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\SecurityService.Infrastructure.Core.pdb
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.dll
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.SqlServer.dll
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.xml
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.SqlServer.xml
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csproj.CoreCompileInputs.cache
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csproj.CopyComplete
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.dll
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.pdb
+D:\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csprojAssemblyReference.cache

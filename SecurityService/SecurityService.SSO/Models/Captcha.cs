@@ -109,9 +109,7 @@ namespace SecurityService.SSO.Models
 
             return byteArray;
         }
-
-      
-
+    
         private string FontFamilySelector()
         {
             string[] fontFamilyList =
@@ -247,7 +245,6 @@ namespace SecurityService.SSO.Models
             Random rnd3 = new Random();
             return myhatchs[rnd3.Next(6)];
         }
-
 
     }
 }

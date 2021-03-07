@@ -17,6 +17,7 @@ using System.Web.Routing;
 using System.Web.Mvc;
 using System.Web.Http;
 using SecurityService.SSO.App_Start;
+using System.Collections.Generic;
 
 namespace SecurityService.SSO
 {
@@ -78,14 +79,15 @@ namespace SecurityService.SSO
             //});
             #endregion
             #region IdentityService Configuration
+            
 
             app.Map("/core", identity =>
             {
                 IdentityServerServiceFactory idSvrFactory = IdentityServiceFactory.Configure(strConnectionString);
 
                 idSvrFactory.ViewService =
-                new Registration<IViewService, MvcViewService<LogonWorkflowController>>();
-              // new Registration<IViewService>(typeof(ApplicationViewService));
+               new Registration<IViewService, MvcViewService<LogonWorkflowController>>();//  use mvc view .fathollahi
+              // new Registration<IViewService>(typeof(ApplicationViewService)); // use angular view  .fathollahi
                 idSvrFactory.CorsPolicyService =
                     new Registration<ICorsPolicyService>(new DefaultCorsPolicyService { AllowAll = true });
 
@@ -101,6 +103,18 @@ namespace SecurityService.SSO
 
                 IdentityServerOptions options = new IdentityServerOptions
                 {
+                    //AuthenticationOptions = new AuthenticationOptions
+                    //{
+                    //    LoginPageLinks = new List<LoginPageLink>()
+                    //  {
+                    //   new LoginPageLink()
+                    //   {
+                    //       Href = "ResetPassword",
+                    //       Text = "Reset Your Password",
+                    //       Type = "resetPassword"
+                    //   }
+                    //   }
+                    //},
                     RequireSsl = false,
                     SiteName = "IdentityServer",
                     SigningCertificate = Certificate.LoadCertificate(),
@@ -110,8 +124,8 @@ namespace SecurityService.SSO
                 identity.UseIdentityServer(options);
             });
             var httpconfig = new HttpConfiguration();
-            WebApiConfig.Register(app, url, httpconfig);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            WebApiConfig.Register(app, url, httpconfig); // register for web route
+            RouteConfig.RegisterRoutes(RouteTable.Routes); //register for api route
 
             #endregion IdentityService Configuration
         }

@@ -253,7 +253,8 @@ namespace SecurityService.SSO.Infrastructure
         public static Dictionary<string, string> CaptchaStorage = new Dictionary<string, string>();
         public override async Task AuthenticateLocalAsync(LocalAuthenticationContext ctx)
 		{
-           
+            #region Authenticate Captcha
+
             var requestContext = (System.Web.Routing.RequestContext)_owinEnv.Environment["System.Web.Routing.RequestContext"];
           var ss=  HttpContext.Current.Session;
            
@@ -271,7 +272,7 @@ namespace SecurityService.SSO.Infrastructure
                 return;
             }
 
-           //.......
+            #endregion
 
             string username = ctx.UserName;
 			string password = ctx.Password;

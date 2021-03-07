@@ -27,6 +27,10 @@ using Uri = System.Uri;
 
 namespace SecurityService.SSO.Services
 {
+    /// <summary>
+    /// service for use mvc view Login
+    /// </summary>
+    /// <typeparam name="TController"></typeparam>
     public class MvcViewService<TController> : IViewService
         where TController : ControllerBase
     {
@@ -180,6 +184,14 @@ namespace SecurityService.SSO.Services
         }
 
         #endregion
+
+        public Task<Stream> ResetPassword(LoginViewModel model,SignOutMessage message)
+        {
+            return this.GenerateStream(
+                model,
+                "error",
+                () => this.defaultViewService.Error(model));
+        }
 
         #region Generate Stream
 

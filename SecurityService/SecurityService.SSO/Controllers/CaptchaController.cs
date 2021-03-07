@@ -18,6 +18,8 @@ namespace SecurityService.SSO.Controllers
 {
     public class CaptchaController : ApiController
     {
+        #region captcha for angular ui
+
         private const int Width = 200;
         private const int Height = 34;
 
@@ -38,7 +40,7 @@ namespace SecurityService.SSO.Controllers
             gfxCaptchaImage.Clear(Color.White);
 
             var salt = CreateSalt();
-          //  StoreSalt(salt);
+           StoreSalt(salt);
             
 
             var randomString = "          " + salt;
@@ -111,8 +113,8 @@ namespace SecurityService.SSO.Controllers
                     ms.WriteTo(HttpContext.Current.Response.OutputStream);
                 }
             }
-          
-             httpResponseMessage.Content = new StreamContent(ms);
+            
+            httpResponseMessage.Content = new StreamContent(ms);
             return httpResponseMessage;
 
         }
@@ -152,8 +154,8 @@ namespace SecurityService.SSO.Controllers
         {
             var query = HttpContext.Current.Request.UrlReferrer?.Query;
             var requestId = query?.Substring(8, query.Length - 8) ?? "";
-           // IdentityUserService.CaptchaStorage.Remove(requestId);
-           // IdentityUserService.CaptchaStorage.Add(requestId, salt);
+            IdentityUserService.CaptchaStorage.Remove(requestId);
+            IdentityUserService.CaptchaStorage.Add(requestId, salt.ToString());
         }
 
         private int CreateSalt()
@@ -288,6 +290,6 @@ namespace SecurityService.SSO.Controllers
 
 
         #endregion
-
+        #endregion
     }
 }

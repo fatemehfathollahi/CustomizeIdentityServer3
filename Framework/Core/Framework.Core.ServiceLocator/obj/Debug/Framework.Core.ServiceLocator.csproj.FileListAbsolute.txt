@@ -63,3 +63,16 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.S
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.pdb
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.ServiceLocator.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.ServiceLocator.pdb
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Core.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Windsor.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.Contracts.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.Contracts.pdb
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Core.xml
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Windsor.xml
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csprojAssemblyReference.cache
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csproj.CoreCompileInputs.cache
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csproj.CopyComplete
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.pdb

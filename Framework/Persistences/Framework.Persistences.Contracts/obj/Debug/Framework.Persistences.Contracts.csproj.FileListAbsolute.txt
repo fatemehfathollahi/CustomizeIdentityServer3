@@ -28,3 +28,8 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framewor
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.pdb
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.csprojAssemblyReference.cache
+D:\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\bin\Debug\Framework.Persistences.Contracts.dll
+D:\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\bin\Debug\Framework.Persistences.Contracts.pdb
+D:\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.csproj.CoreCompileInputs.cache
+D:\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.dll
+D:\DaNaManagement2\Framework\Persistences\Framework.Persistences.Contracts\obj\Debug\Framework.Persistences.Contracts.pdb

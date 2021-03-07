@@ -28,8 +28,9 @@
                             <input type="hidden" name="@Model.AntiForgery.Name" value="@Model.AntiForgery.Value" />
                             <fieldset>
                                 <div class="form-group">
-                                    <label for="username">Email address</label>
-                                    <input required name="username" data-mailcheckfield=".email-suggestion" autofocus id="username" type="text" ng-model="model.username" class="form-control" placeholder="Username" value="@Model.Username" maxlength="100" @(ViewBag.DisableUserNameChange == true ? "readonly='readonly'" : "")>
+                                    <label for="username">UserName</label>
+                                    <input required name="username" autofocus id="username" type="text" ng-model="model.username" class="form-control" placeholder="Username" value="@Model.Username" maxlength="100" @(ViewBag.DisableUserNameChange == true ? "readonly='readonly'" : "")>
+                                
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
@@ -65,23 +66,26 @@
                                     </div>
                                 }
 
-                                <div class="col-lg-12" style="padding-top: 10px;padding-bottom: 10px">
-                                    <a href="/RecoverPassword">فراموشی رمز عبور</a>
-                                </div>
+
                                 <div class="form-group">
                                     <button class="btn btn-primary" id="login" ng-disabled="form.$invalid">Login</button>
                                 </div>
                             </fieldset>
                         </form>
-                        <ul class="list-unstyled">
-                            @if (Model.AdditionalLinks != null)
-                            {
-                                foreach (var link in Model.AdditionalLinks)
-                                {
-                                    <li><a href="@link.Href" id="@link.Text.Replace(" ", "")">@link.Text</a></li>
-                                }
-                            }
-                        </ul>
+                        <div class="col-lg-12" style="padding-top: 10px;padding-bottom: 10px">
+                            <a href="#" id="submit_link" class="button">Forgot Password</a>
+                            @*<a href="@Url.Action("RecoverCode", "RecoverPassword", new { Username = Model.Username})">فراموشی رمز عبور</a>*@
+                            @*<a href="/RecoverPassword/RecoverCode">فراموشی رمز عبور</a>*@
+                        </div>
+                        @*<ul class="list-unstyled">
+            @if (Model.AdditionalLinks != null)
+            {
+                foreach (var link in Model.AdditionalLinks)
+                {
+                    <li><a href="@link.Href" id="@link.Text.Replace(" ", "")">@link.Text</a></li>
+                }
+            }
+        </ul>*@
                     </div>
                 </div>
             </div>

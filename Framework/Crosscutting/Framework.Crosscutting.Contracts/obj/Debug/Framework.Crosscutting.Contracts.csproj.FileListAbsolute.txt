@@ -53,3 +53,14 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framewor
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.pdb
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csprojAssemblyReference.cache
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Framework.Crosscutting.Contracts.dll
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Framework.Crosscutting.Contracts.pdb
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Core.dll
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Windsor.dll
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Core.xml
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\bin\Debug\Castle.Windsor.xml
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csproj.CoreCompileInputs.cache
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csproj.CopyComplete
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.dll
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.pdb
+D:\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Contracts\obj\Debug\Framework.Crosscutting.Contracts.csprojAssemblyReference.cache

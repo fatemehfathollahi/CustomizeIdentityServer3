@@ -43,3 +43,12 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.C
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.pdb
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Core.Contracts.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Core.Contracts.pdb
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Persistences.Contracts.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\bin\Debug\Framework.Persistences.Contracts.pdb
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csprojAssemblyReference.cache
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csproj.CoreCompileInputs.cache
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.csproj.CopyComplete
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.dll
+D:\DaNaManagement2\Framework\Core\Framework.Core.Contracts\obj\Debug\Framework.Core.Contracts.pdb
