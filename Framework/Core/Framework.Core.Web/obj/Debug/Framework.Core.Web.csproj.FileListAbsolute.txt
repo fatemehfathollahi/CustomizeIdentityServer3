@@ -114,3 +114,5 @@ W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Web\obj\Debu
 W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Web\obj\Debug\Framework.Core.Web.csproj.CopyComplete
 W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Web\obj\Debug\Framework.Core.Web.dll
 W:\DanaSelf\Management_Prj\Management\Framework\Core\Framework.Core.Web\obj\Debug\Framework.Core.Web.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Web\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Web\bin\Debug\System.Net.Http.Formatting.xml

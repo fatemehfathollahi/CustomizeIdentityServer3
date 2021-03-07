@@ -214,3 +214,4 @@ W:\DanaSelf\Management_Prj\Management\Management\Infrastructure\Management.Infra
 W:\DanaSelf\Management_Prj\Management\Management\Infrastructure\Management.Infrastructure.Model\obj\Debug\Management.Infrastructure.Models.csproj.CopyComplete
 W:\DanaSelf\Management_Prj\Management\Management\Infrastructure\Management.Infrastructure.Model\obj\Debug\Management.Infrastructure.Models.dll
 W:\DanaSelf\Management_Prj\Management\Management\Infrastructure\Management.Infrastructure.Model\obj\Debug\Management.Infrastructure.Models.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Management\Infrastructure\Management.Infrastructure.Model\bin\Debug\Castle.Core.dll

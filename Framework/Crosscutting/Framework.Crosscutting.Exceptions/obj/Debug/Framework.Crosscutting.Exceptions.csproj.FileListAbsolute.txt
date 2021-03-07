@@ -150,3 +150,4 @@ W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutt
 W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutting.Exceptions\obj\Debug\Framework.Crosscutting.Exceptions.csproj.CopyComplete
 W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutting.Exceptions\obj\Debug\Framework.Crosscutting.Exceptions.dll
 W:\DanaSelf\Management_Prj\Management\Framework\Crosscutting\Framework.Crosscutting.Exceptions\obj\Debug\Framework.Crosscutting.Exceptions.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Crosscutting\Framework.Crosscutting.Exceptions\bin\Debug\Microsoft.Web.Infrastructure.dll
