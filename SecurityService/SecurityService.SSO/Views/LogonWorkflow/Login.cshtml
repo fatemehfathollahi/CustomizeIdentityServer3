@@ -29,8 +29,14 @@
                             <fieldset>
                                 <div class="form-group">
                                     <label for="username">UserName</label>
+<<<<<<< HEAD
                                     <input required name="username" autofocus id="username" type="text" ng-model="model.username" class="form-control" placeholder="Username" value="@Model.Username" maxlength="100" @(ViewBag.DisableUserNameChange == true ? "readonly='readonly'" : "")>
                                 
+=======
+
+                                    <input required name="username" data-mailcheckfield=".email-suggestion" autofocus id="username" type="text" ng-model="model.username" class="form-control" placeholder="Username" value="@Model.Username" maxlength="100" @(ViewBag.DisableUserNameChange == true ? "readonly='readonly'" : "")>
+                                    <input type="hidden" value="@Model.Username" id="Username" name="Username" />
+>>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
@@ -69,6 +75,12 @@
 
                                 <div class="form-group">
                                     <button class="btn btn-primary" id="login" ng-disabled="form.$invalid">Login</button>
+                                </div>
+
+                                <div class="col-lg-12" style="padding-top: 10px;padding-bottom: 10px">
+
+                                    @Html.ActionLink("Forgot Password", "RecoverPass", "LogonWorkflow", new { Username = Model.Username }, FormMethod.Post)
+                                    @*<a  href="/RecoverPassword/RecoverCode?@Model">Forgot Password </a>*@
                                 </div>
                             </fieldset>
                         </form>

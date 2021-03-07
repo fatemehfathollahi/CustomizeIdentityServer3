@@ -6,12 +6,18 @@ using System.Drawing;
 using System;
 using System.Text;
 using SecurityService.SSO.Models;
+using SecurityService.SSO.Services;
+using IdentityServer3.Core.Services.Default;
+using System.Threading.Tasks;
+using SecurityService.SSO.IdentityService;
+using SecurityService.SSO.Infrastructure;
+using System.Runtime.Remoting.Contexts;
+using System.Security.Claims;
 
 namespace SecurityService.SSO.Controllers
 {
     public class LogonWorkflowController : Controller
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="LogonWorkflowController"/> class.
         /// </summary>
@@ -130,7 +136,29 @@ namespace SecurityService.SSO.Controllers
 
         #endregion
 
-      
+        #region RecoverPass
 
+
+        public ActionResult ResetPassword(LoginViewModel model)
+        {
+            return this.View(model);
+        }
+
+
+        public  ActionResult RecoverPass(string Username)
+        {
+            //var userName = ((ClaimsIdentity)User.Identity).FindFirst("UserName");
+            var  selectedTraining = Request["Username"];
+            if (Username == null)
+            {
+                ModelState.AddModelError("UserName", "UserName is Require");
+                return  Redirect("http://localhost:16161/");
+            }
+           var _name =  RecoveryPassService.GetPhoneNumber(Username);
+            return View("Index", Username);
+        }
+        #endregion
+
+       
     }
 }

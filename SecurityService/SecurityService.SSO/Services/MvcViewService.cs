@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-
+using IdentityServer3.Core.Configuration;
 using IdentityServer3.Core.Models;
 using IdentityServer3.Core.Services;
 using IdentityServer3.Core.Services.Default;
@@ -91,6 +91,7 @@ namespace SecurityService.SSO.Services
         /// </returns>
         public Task<Stream> Login(LoginViewModel model, SignInMessage message)
         {
+            
             return this.GenerateStream(
                 model,
                 message,
@@ -98,6 +99,7 @@ namespace SecurityService.SSO.Services
                 () => this.defaultViewService.Login(model, message));
         }
 
+      
         /// <summary>
         /// Loads the HTML for the logout prompt page.
         /// </summary>
@@ -117,6 +119,8 @@ namespace SecurityService.SSO.Services
                 "logout",
                 () => this.defaultViewService.Logout(model, message));
         }
+
+
 
         /// <summary>
         ///     Loads the HTML for the logged out page informing the user that they have successfully logged out.
@@ -205,7 +209,7 @@ namespace SecurityService.SSO.Services
         /// <param name="actionName">The name of the Action on the Controller that should be called to generate the HTML for this page</param>
         /// <param name="fallbackFunc">An alternate function to generate the Stream with if the Controller.Action cannot be found, or does not work</param>
         /// <returns>A Stream that will stream the HTML for this page</returns>
-        private Task<Stream> GenerateStream<TViewModel, TMessage>(
+        public Task<Stream> GenerateStream<TViewModel, TMessage>(
             TViewModel model,
             TMessage message,
             string actionName,
