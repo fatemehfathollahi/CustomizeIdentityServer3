@@ -77,7 +77,6 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csprojAssemblyReference.cache
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csproj.CoreCompileInputs.cache
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.dll
