@@ -171,3 +171,4 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.W
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Web\obj\Debug\Framework.Core.Web.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Web\obj\Debug\Framework.Core.Web.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Web\obj\Debug\Framework.Core.Web.pdb
+C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Web\obj\Debug\Framework.Core.Web.csprojAssemblyReference.cache

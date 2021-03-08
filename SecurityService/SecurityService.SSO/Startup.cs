@@ -79,12 +79,6 @@ namespace SecurityService.SSO
             //});
             #endregion
             #region IdentityService Configuration
-<<<<<<< HEAD
-            
-
-=======
-           
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
             app.Map("/core", identity =>
             {
                 IdentityServerServiceFactory idSvrFactory = IdentityServiceFactory.Configure(strConnectionString);
@@ -92,17 +86,13 @@ namespace SecurityService.SSO
 
                 //config view -- fathollahi
                 idSvrFactory.ViewService =
-<<<<<<< HEAD
                new Registration<IViewService, MvcViewService<LogonWorkflowController>>();//  use mvc view .fathollahi
               // new Registration<IViewService>(typeof(ApplicationViewService)); // use angular view  .fathollahi
-=======
+
              // new Registration<IViewService, MvcViewService<LogonWorkflowController>>(); // use mvc view  
               new Registration<IViewService>(typeof(ApplicationViewService));  // use angular view - if want to use this view comment top line and uncomment this view
 
 
-
-
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
                 idSvrFactory.CorsPolicyService =
                     new Registration<ICorsPolicyService>(new DefaultCorsPolicyService { AllowAll = true });
 
@@ -119,7 +109,6 @@ namespace SecurityService.SSO
                
                 IdentityServerOptions options = new IdentityServerOptions
                 {
-<<<<<<< HEAD
                     //AuthenticationOptions = new AuthenticationOptions
                     //{
                     //    LoginPageLinks = new List<LoginPageLink>()
@@ -132,7 +121,6 @@ namespace SecurityService.SSO
                     //   }
                     //   }
                     //},
-=======
                     AuthenticationOptions  = new AuthenticationOptions
                     {
                         LoginPageLinks = new List<LoginPageLink>()
@@ -145,7 +133,6 @@ namespace SecurityService.SSO
                        }
                        }
                     },
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
                     RequireSsl = false,
                     SiteName = "IdentityServer",
                     SigningCertificate = Certificate.LoadCertificate(),

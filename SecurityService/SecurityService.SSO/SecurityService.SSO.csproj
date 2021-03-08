@@ -281,11 +281,8 @@
     <Compile Include="Infrastructure\Configuration\Certificate.cs" />
     <Compile Include="Infrastructure\Configuration\Clients.cs" />
     <Compile Include="Infrastructure\Configuration\Scopes.cs" />
-<<<<<<< HEAD
     <Compile Include="Infrastructure\Configuration\SmsSetting.cs" />
-=======
     <Compile Include="Infrastructure\RecoveryPassService.cs" />
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
     <Compile Include="Models\Captcha.cs" />
     <Compile Include="Models\SmsModel.cs" />
     <Compile Include="Models\SmsSettingModel.cs" />
@@ -371,7 +368,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\RecoverPassword\Index.cshtml" />
     <Content Include="Views\LogonWorkflow\ResetPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -414,9 +410,7 @@
       <Name>SecurityService.Infrastructure.Models</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\MvcCaptcha\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

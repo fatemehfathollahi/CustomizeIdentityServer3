@@ -709,10 +709,7 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\obj\Debug\SecurityService.SSO.pdb
-<<<<<<< HEAD
-=======
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.Mvc.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.xml
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\SecurityService.SSO\bin\Fluentx.Mvc.xml
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2

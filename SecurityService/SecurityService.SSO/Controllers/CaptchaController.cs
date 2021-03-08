@@ -17,7 +17,7 @@ using SecurityService.SSO.IdentityService;
 
 namespace SecurityService.SSO.Controllers
 {
-   
+
     public class CaptchaController : ApiController
     {
         #region captcha for angular ui
@@ -27,12 +27,13 @@ namespace SecurityService.SSO.Controllers
 
         public int Get(string isactive)
         {
-            var requireCaptcha = ConfigurationManager.AppSettings["RequireCaptcha"].AsBool();
-            return 1;//requireCaptcha ? 1 : 0;
+            bool requireCaptcha = true;//Convert.ToBoolean( ConfigurationManager.AppSettings["RequireCaptcha"]);
+            return requireCaptcha ? 1 : 0;
         }
 
-        public HttpResponse Get()
+        public HttpResponseMessage Get()
         {
+            HttpResponseMessage httpResponseMessage = new HttpResponseMessage(HttpStatusCode.OK);
             Bitmap bitmap = new Bitmap(Width, Height, PixelFormat.Format32bppArgb);
 
             Graphics gfxCaptchaImage = Graphics.FromImage(bitmap);
@@ -41,13 +42,8 @@ namespace SecurityService.SSO.Controllers
             gfxCaptchaImage.Clear(Color.White);
 
             var salt = CreateSalt();
-<<<<<<< HEAD
-           StoreSalt(salt);
-            
-=======
             StoreSalt(salt);
 
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
 
             var randomString = "          " + salt;
 
@@ -96,7 +92,12 @@ namespace SecurityService.SSO.Controllers
 
             gfxCaptchaImage.Flush();
 
-<<<<<<< HEAD
+
+            //HttpContext.Current.Response.ContentType = "image/jpeg";
+            //var mm = HttpContext.Current.Response.OutputStream;
+            //bitmap.Save(mm, ImageFormat.Jpeg);
+
+
             MemoryStream ms;
             ImageCodecInfo codec = GetEncoderInfo("image/jpeg");
             using (EncoderParameters ep = new EncoderParameters())
@@ -104,7 +105,7 @@ namespace SecurityService.SSO.Controllers
                 ep.Param[0] = new EncoderParameter(Encoder.Quality, 100L);
 
                 // Encode the image
-                using ( ms = new MemoryStream())
+                using (ms = new MemoryStream())
                 {
                     bitmap.Save(ms, codec, ep);
 
@@ -114,16 +115,23 @@ namespace SecurityService.SSO.Controllers
                     ms.WriteTo(HttpContext.Current.Response.OutputStream);
                 }
             }
-            
+
             httpResponseMessage.Content = new StreamContent(ms);
             return httpResponseMessage;
-=======
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
 
-            HttpContext.Current.Response.ContentType = "image/jpeg";
-            bitmap.Save(HttpContext.Current.Response.OutputStream, ImageFormat.Jpeg);
+        }
 
-            return HttpContext.Current.Response;
+        private ImageCodecInfo GetEncoderInfo(String mimeType)
+        {
+            int j;
+            ImageCodecInfo[] encoders;
+            encoders = ImageCodecInfo.GetImageEncoders();
+            for (j = 0; j < encoders.Length; ++j)
+            {
+                if (encoders[j].MimeType == mimeType)
+                    return encoders[j];
+            }
+            return null;
         }
 
         private void DrawLine(Bitmap bmp)
@@ -158,7 +166,6 @@ namespace SecurityService.SSO.Controllers
             return random.Next(1000, 9999);
         }
 
-<<<<<<< HEAD
 
         //public ActionResult CaptchaImage(string prefix, bool noisy = true)
         //{
@@ -286,7 +293,6 @@ namespace SecurityService.SSO.Controllers
 
         #endregion
         #endregion
-=======
->>>>>>> 0d20e5961a45f9fbdc3d8f4865af2742226075e2
     }
 }
+  
