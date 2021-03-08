@@ -62,5 +62,10 @@ namespace Management.Infrastructure.Data
 
 			base.OnModelCreating(modelBuilder);
 		}
-	}
+
+        public override int SaveChanges()
+        {
+            return base.SaveChanges();
+        }
+    }
 }

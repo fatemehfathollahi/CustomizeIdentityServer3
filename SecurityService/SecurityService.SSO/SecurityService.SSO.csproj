@@ -63,6 +63,12 @@
       <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Fluentx, Version=2.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Fluentx.2.0.4\lib\Fluentx.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluentx.Mvc, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Fluentx.Mvc.1.0.4\lib\Fluentx.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlSanitizationLibrary, Version=4.3.0.0, Culture=neutral, PublicKeyToken=d127efab8a9c114f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\AntiXSS.4.3.0\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
       <Private>True</Private>
@@ -94,8 +100,14 @@
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Host.HttpListener.2.0.2\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting, Version=2.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Owin.Hosting.2.0.2\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
@@ -106,6 +118,7 @@
     <Reference Include="Microsoft.Owin.Security.OpenIdConnect, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.Security.OpenIdConnect.3.0.1\lib\net45\Microsoft.Owin.Security.OpenIdConnect.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -127,8 +140,8 @@
       <HintPath>..\..\packages\System.IdentityModel.Tokens.Jwt.4.0.3.308261200\lib\net45\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Runtime.Serialization" />
@@ -147,8 +160,11 @@
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Owin.5.2.7\lib\net45\System.Web.Http.Owin.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
@@ -191,6 +207,11 @@
     <Content Include="Content\app\login.html" />
     <Content Include="Content\app\logout.html" />
     <Content Include="Content\app\permissions.html" />
+    <Content Include="Content\app\resetpassword.html" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\avatar.png" />
     <Content Include="Content\images\bg.jpg" />
@@ -199,6 +220,7 @@
     <Content Include="Content\images\loading.gif" />
     <Content Include="Content\images\Login-Logo.png" />
     <Content Include="Content\images\Notification.png" />
+    <Content Include="Content\images\refresh.png" />
     <Content Include="Content\libs\ace.css" />
     <Content Include="Content\libs\ace.min.css" />
     <Content Include="Content\libs\angular\angular.1.2.13.js" />
@@ -222,11 +244,35 @@
     <Content Include="Content\libs\jquery\jquery-2.1.4.js" />
     <Content Include="Content\libs\jquery\jquery-2.1.4.min.js" />
     <Content Include="Content\libs\Login.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Captcha.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.form.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CaptchaController.cs" />
+    <Compile Include="Controllers\LogonWorkflowController.cs" />
+    <Compile Include="Controllers\MvcCaptchaController.cs" />
+    <Compile Include="Controllers\RecoverPasswordController.cs" />
     <Compile Include="IdentityService\IdentityServerServiceFactory.cs" />
     <Compile Include="IdentityService\IdentityUserService.cs" />
     <Compile Include="IdentityService\IdentityUserServiceExtensions.cs" />
@@ -235,11 +281,21 @@
     <Compile Include="Infrastructure\Configuration\Certificate.cs" />
     <Compile Include="Infrastructure\Configuration\Clients.cs" />
     <Compile Include="Infrastructure\Configuration\Scopes.cs" />
+    <Compile Include="Infrastructure\Configuration\SmsSetting.cs" />
+    <Compile Include="Infrastructure\RecoveryPassService.cs" />
+    <Compile Include="Models\Captcha.cs" />
+    <Compile Include="Models\SmsModel.cs" />
+    <Compile Include="Models\SmsSettingModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MvcViewService.cs" />
+    <Compile Include="Services\SmsService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Content\fonts\BYekan.eot" />
     <Content Include="Content\fonts\BYekan.ttf" />
     <Content Include="Content\fonts\BYekan.woff" />
@@ -301,6 +357,18 @@
     <Content Include="Content\libs\jquery\jquery-2.1.4.min.map" />
     <Content Include="Infrastructure\Configuration\idsrv3test.pfx" />
     <None Include="Properties\PublishProfiles\FileSystem.pubxml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\LogonWorkflow\Consent.cshtml" />
+    <Content Include="Views\LogonWorkflow\Error.cshtml" />
+    <Content Include="Views\LogonWorkflow\LoggedOut.cshtml" />
+    <Content Include="Views\LogonWorkflow\Login.cshtml" />
+    <Content Include="Views\LogonWorkflow\Logout.cshtml" />
+    <Content Include="Views\LogonWorkflow\Permissions.cshtml" />
+    <Content Include="Views\LogonWorkflow\_RenderAngularModel.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\LogonWorkflow\ResetPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -309,6 +377,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Framework\Core\Framework.Core.Contracts\Framework.Core.Contracts.csproj">
+      <Project>{c463112e-f41e-4f2d-a8f6-8916e80dc98c}</Project>
+      <Name>Framework.Core.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\Persistences\Framework.Persistences.EF\Framework.Persistences.EF.csproj">
+      <Project>{d448869e-19c3-45d4-99c7-1554218b5404}</Project>
+      <Name>Framework.Persistences.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Management\Infrastructure\Management.Infrastructure.Data\Management.Infrastructure.Data.csproj">
+      <Project>{cb43959a-efbb-4ecf-8fd1-0089abe049ef}</Project>
+      <Name>Management.Infrastructure.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Management\Infrastructure\Management.Infrastructure.Model\Management.Infrastructure.Models.csproj">
+      <Project>{3d3d79fe-d1f6-421b-9bec-5b783495ae65}</Project>
+      <Name>Management.Infrastructure.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Management\Infrastructure\Management.Infrastructure.Service\Management.Infrastructure.Service.csproj">
+      <Project>{84e07fe2-07a3-4bdd-aa4b-24d8d9e9ee54}</Project>
+      <Name>Management.Infrastructure.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\SecurityService.Infrastructure.Data\SecurityService.Infrastructure.Data.csproj">
       <Project>{88DA1159-907B-4E30-9FDC-C082D763FE23}</Project>
       <Name>SecurityService.Infrastructure.Data</Name>

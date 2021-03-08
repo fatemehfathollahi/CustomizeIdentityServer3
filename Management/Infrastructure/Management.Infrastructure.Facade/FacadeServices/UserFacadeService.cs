@@ -84,7 +84,7 @@ namespace Management.Infrastructure.Facade.FacadeServices
 			var model = Mapper.Map<User>(user);
 
 			model.PasswordHash = _hasher.HashPassword(model.PasswordHash);
-
+            model.PhoneNumber = user.Mobile;//for recovery password add by fathollahi 99/12/177
 			UserService.CreateUser(model);
 		}
 

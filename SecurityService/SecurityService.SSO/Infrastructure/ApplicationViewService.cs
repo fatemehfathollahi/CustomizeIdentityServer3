@@ -1,7 +1,9 @@
-﻿using IdentityServer3.Core.Models;
+﻿using IdentityServer3.Core.Configuration;
+using IdentityServer3.Core.Models;
 using IdentityServer3.Core.Services;
 using IdentityServer3.Core.Validation;
 using IdentityServer3.Core.ViewModels;
+using SecurityService.SSO.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,13 +25,17 @@ namespace SecurityService.SSO.Infrastructure
 		{
 			Client client = await clientStore.FindClientByIdAsync(message.ClientId);
 			string name = client != null ? client.ClientName : null;
-			return await Render(model, "login", name);
+            // var newmodel = new LoginModel();
+            //return await Render(newmodel, "login", name);
+
+            return await Render(model, "login", name);
 		}
 
 		public Task<Stream> Logout(LogoutViewModel model, SignOutMessage message)
 		{
 			return Render(model, "logout");
 		}
+
 
 		public Task<Stream> LoggedOut(LoggedOutViewModel model, SignOutMessage message)
 		{
@@ -51,7 +57,7 @@ namespace SecurityService.SSO.Infrastructure
 			return Render(model, "error");
 		}
 
-		protected virtual Task<System.IO.Stream> Render(CommonViewModel model, string page, string clientName = null)
+        protected virtual Task<System.IO.Stream> Render(CommonViewModel model, string page, string clientName = null)
 		{
 			string json = Newtonsoft.Json.JsonConvert.SerializeObject(model, Newtonsoft.Json.Formatting.None, new Newtonsoft.Json.JsonSerializerSettings() { ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver() });
 
@@ -69,7 +75,8 @@ namespace SecurityService.SSO.Infrastructure
 		private string LoadHtml(string name)
 		{
 			string file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"content\app");
-			file = Path.Combine(file, name + ".html");
+            //string file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Views");
+            file = Path.Combine(file, name + ".html");
 			return File.ReadAllText(file);
 		}
 
