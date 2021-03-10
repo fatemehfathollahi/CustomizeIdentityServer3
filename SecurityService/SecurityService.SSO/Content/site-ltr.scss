@@ -1,0 +1,114 @@
+﻿@import "_mixins";
+@import "_variables";
+
+@include font-latin();
+
+/*#region bootstrap-override */
+.form-control {
+    border-radius: 0;
+    &:focus {
+        box-shadow: none;
+        border-color: $color-orange-500;
+    }
+}
+/*#endregion */
+
+/*#region defaults */
+* {
+    transition: all .5s ease-in-out; 
+}
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: roboto, Tahoma;
+    font-size: 13px;
+    margin-bottom: 60px;
+    padding-top: 50px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    outline: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.right-to-left {
+    direction: ltr;
+    font-family: Tahoma;
+}
+
+::-webkit-input-placeholder {
+    direction: ltr;
+    font-family: roboto;
+    text-align: left;
+}
+
+:-moz-placeholder {
+    direction: ltr;
+    font-family: roboto;
+    text-align: left;
+}
+
+::-moz-placeholder {
+    direction: ltr;
+    font-family: roboto;
+    text-align: left;
+}
+
+:-ms-input-placeholder {
+    direction: ltr;
+    font-family: roboto;
+    text-align: left;
+}
+
+footer {
+    background-color: #f5f5f5;
+    bottom: 0;
+    height: 60px;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+}
+/*#endregion */
+
+/*#region main */
+/*#endregion */
+
+/*#region header */
+#logoutForm {
+    margin-top: 15px;
+    a {
+        color: $color-grey-500;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            color: $color-orange-500;
+        }
+    }
+}
+.header-logo {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    background-color: $color-white;
+}
+.category-nav {
+    border-radius: 0;
+    background-color: $color-orange-500;
+    border-top-color: $color-orange-500;
+    border-bottom-width: 2px;
+    .navbar-nav > li > a {
+        color: $color-white;
+        &:hover, &:active, &:focus {
+            color: $color-black;
+        }
+    }
+}
+/*#endregion */

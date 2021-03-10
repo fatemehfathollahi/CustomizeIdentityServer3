@@ -1,0 +1,13 @@
+﻿.mce-widget .mce-tooltip .mce-tooltip-inner, .mce-content-body {
+    font-family: IRANSans !important;
+    font-size: 12px !important;
+}
+
+/*.my-tiny-class {
+    font-family: Tahoma !important;
+}*/
+
+body * {
+    font-family:Tahoma !important;
+    line-height: 20px;
+}

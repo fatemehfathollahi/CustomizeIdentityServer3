@@ -1,0 +1,130 @@
+﻿@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('/Content/fonts/IRANSansWeb(FaNum).eot');
+    src: url('/Content/fonts/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), url('/Content/fonts/IRANSansWeb(FaNum).woff2') format('woff2'), url('/Content/fonts/IRANSansWeb(FaNum).woff') format('woff'), url('/Content/fonts/IRANSansWeb(FaNum).ttf') format('truetype');
+}
+
+body {
+    font-family: IRANSans;
+    background-color: #eee;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+.loginform {
+    margin-top: 70px;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.login-textbox {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+    .login-textbox h1 {
+        font-size: 17px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+
+
+    .login-textbox div p {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-weight: bold;
+    }
+
+.link-image {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    text-decoration: none;
+}
+
+    .link-image span {
+        display: block;
+        /*text-align: center;*/
+    }
+
+    .link-image a {
+        text-decoration: none;
+        text-align: center;
+    }
+.link-image img {
+    text-align: center;
+}
+
+.footer-login {
+    padding-top: 50px;
+    padding-right: 22px;
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+.robot-cheak {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.input-group-addon:first-child {
+    border-color: #cccccc;
+}
+
+.list-item li {
+    text-align: justify;
+    padding-left: 25px;
+    padding-bottom: 8px;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+.footer-login a {
+    text-decoration: none;
+}
+
+
+
+.user-password-style {
+    position: relative;
+}
+
+    .user-password-style i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 17px;
+    }
+.user-password-style input {
+    padding-right: 25px;
+    height: 40px;
+    
+}
+.user-password-style input:focus {
+    border-color: #000;
+    box-shadow: none;
+}
+
+
+
+body {
+    min-width: 380px;
+}
