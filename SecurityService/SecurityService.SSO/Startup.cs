@@ -86,7 +86,7 @@ namespace SecurityService.SSO
 
                 //config view -- fathollahi
                 idSvrFactory.ViewService =
-               new Registration<IViewService, MvcViewService<LogonWorkflowController>>();//  use mvc view .fathollahi
+              new Registration<IViewService, MvcViewService<LogonWorkflowController>>();//  use mvc view .fathollahi
               // new Registration<IViewService>(typeof(ApplicationViewService)); // use angular view  .fathollahi
 
              // new Registration<IViewService, MvcViewService<LogonWorkflowController>>(); // use mvc view  

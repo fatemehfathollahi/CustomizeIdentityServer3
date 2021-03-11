@@ -513,6 +513,9 @@ label.required:after {
               background-color: #EEEEEE; }
         .top-header-navigation ul li.dropdown ul.open {
           display: block; }
+.navbar {
+    background-color: #51445f;
+}
 .navbar-inverse {
     background-color: #51445f;
     border-color: #f5f5f5;
@@ -524,15 +527,15 @@ label.required:after {
 }
 
 .navbar-inverse {
-    background-color: $color-cyan-600;
-
+    background-color: #51445f;
+}
     .navbar-brand {
         color: $color-grey-100;
         vertical-align: middle;
 
-        img {
+        /*img :{
             margin-left: 10px;
-        }
+        }*/
     }
 }
 
@@ -1190,7 +1193,7 @@ label.required:after {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 18px;
+    font-size: 13px;
     color: #BDBDBD; }
   .login-form .login-textbox {
     padding-left: 10px;
@@ -1206,9 +1209,9 @@ label.required:after {
     border-color: #9E9E9E;
     color: #424242; }
 
-@media (min-width: 1000px) {
+@media (min-width: 990px) {
   .full-page .container {
-    max-width: 770px; } }
+    max-width: 750px; } }
 
 @media (max-width: 990px) {
   .full-page .right-login-section {
@@ -1379,13 +1382,13 @@ label.required:after {
 
 .login-sec {
   text-align: center;
-  width: 45%;
+  width: 35%;
   margin: 0px auto;
-  padding: 76px;
+  padding: 20px;
   border: 0px solid;
   border-radius: 6px;
   position: fixed;
-  top: 168px;
+  top: 75px;
   z-index: 100;
   background-color: white;
   right: 10px;

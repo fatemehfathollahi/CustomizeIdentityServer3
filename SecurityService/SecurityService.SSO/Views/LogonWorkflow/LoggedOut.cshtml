@@ -1,6 +1,6 @@
 ﻿@model IdentityServer3.Core.ViewModels.LoggedOutViewModel
 @{
-	ViewBag.Title = "Logout";
+//ViewBag.Title = "Logout";
 }
 
 @* This is essentially a copy of the embedded HTML that comes from IdSvr, adapted to access the Model server-side *@
@@ -8,7 +8,7 @@
 <div class="page-header">
 	<h1>
 		@ViewBag.Title
-		<small id="confirmation">You are now logged out</small>
+        <small id="confirmation">شما از سامانه خارج شدید</small>
 	</h1>
 </div>
 <div class="row">
@@ -16,24 +16,23 @@
         @* New logic ensuring a consistent message if we are logging out of any applications on the IdentityServer host *@
         @if (Model.RedirectUrl == null)
         {
-            <div>
-                Click <a href="/">here</a> to return to the home page
-            </div>
+        <div>
+            بازگشت به <a href="/">صفحه اصلی</a>
+        </div>
         }
         else
         {
             if (string.IsNullOrWhiteSpace(Model.RedirectUrl))
             {
-                <div>
-                    Click <a href="/">here</a> to return to the home page
-                </div>
+        <div>
+            بازگشت به <a href="/">صفحه اصلی</a>
+        </div>
             }
             else
             {
-                <div>
-                    Click <a href="@Model.RedirectUrl">here</a> to return to the
-                    <span>@Model.ClientName</span> application.
-                </div>
+            <div>
+                ورود به <a href="@Model.RedirectUrl">صفحه لاگین</a>
+            </div>
             }
             foreach (var url in Model.IFrameUrls)
             {

@@ -4,121 +4,124 @@
 }
 <html lang="fa">
 <head>
+    <link rel="icon" href="/Content/images/favicon.ico" type="image/ico">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   
+
     <link href="~/Content/bootstrap-rtl.min.css" rel="stylesheet" />
 </head>
 @*<div class="page-header">
     <h1>@ViewBag.Title</h1>
 </div>*@
-<body style="background-color:#fbfcfa">
-    <div class="full-page">
+<body class="login-body">
+    <div class="login-form container">
 
-        <div class="login-form container">
-            <div class="row">
+        <div class="row center-block">
 
+            <div class="login-sec">
+                <div class="login-textbox">
 
-                @if (!string.IsNullOrWhiteSpace(Model.LoginUrl))
-                {
-                    @*<div class="col-md-6 col-sm-6">*@
-                        if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
-                        {
+                    @if (!string.IsNullOrWhiteSpace(Model.LoginUrl))
+                    {
+                        @*<div class="col-md-6 col-sm-6">*@
+                    if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+                    {
                             <div class="alert alert-danger">
                                 <strong>Error:</strong>
                                 @Model.ErrorMessage
                             </div>
-                        }
+                    }
                         @*<div class="panel panel-default">*@
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="login-textbox">
-                                @*<h>سامانه مدیریت اطلاعات رستوران ها</h>*@
-                                @*<div class="panel-heading">
-                                        <h3 class="panel-title">Local Login</h3>
-                                    </div>*@
-
-                                <form name="form" method="post" action="@Model.LoginUrl" class="form col-md-12 center-block form-horizontal">
-                                    <fieldset>
-                                        <input type="hidden" name="@Model.AntiForgery.Name" value="@Model.AntiForgery.Value" />
-
-                                        <div class="form-group">
-                                            <div class="user-password-style">
-                                                <i class="fa fa-user fa-fw" aria-hidden="true"></i>
-                                                @*<label for="username">UserName</label>*@
-                                                <input required name="username" autofocus id="username" type="text" ng-model="model.username" class="form-control" placeholder="نام کاربری" value="@Model.Username" maxlength="100" @(ViewBag.DisableUserNameChange == true ? "readonly='readonly'" : "")>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <div class="user-password-style">
-                                                <i class="fa fa-user fa-fw" aria-hidden="true"></i>
-                                                @*<label for="password">Password</label>*@
-                                                <input required id="password" name="password" type="password" class="form-control text-left left-to-right" placeholder="رمز عبور" ng-model="model.password" maxlength="100" autocomplete="off">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-xs-12">
-                                                <div class="div-center">
-                                                    <div class="divCaptchaContiner">
-                                                        <img src="@Url.Action("GenerateCaptcha", "MvcCaptcha")" , alt="Captcha Code" class="img-thumbnail" id="captchaImageID" />
-                                                        <img src="~/Content/images/refresh.png" class="divRefreshContainer" id="imgRefreshId" />
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    @Html.TextBox("CaptchaUserInput", null, new
-                                               {
-                                                   @class = "form-control item-margin",
-                                                   required = "",
-                                                   type = "text",
-                                                   placeholder = "تصویر امنیتی",
-                                                   autocomplete = "off"
-                                               })
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        @if (Model.AllowRememberMe)
-                                        {
-                                            <div class="form-group login-remember">
-                                                <label for="rememberMe">
-                                                    <input type="checkbox" id="rememberMe" name="rememberMe" @(Model.RememberMe ? "checked='checked'" : "") value="true">
-                                                    <strong>مرا به خاطر بسپار</strong>
-                                                </label>
-                                            </div>
-                                        }
 
 
-                                        <div class="form-group">
-                                            <button class="btn btn-primary btn-default " id="login" ng-disabled="form.$invalid">ورود به سایت</button>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                                <div class="form-group">
-                                    <div class="col-lg-12" style="padding-top: 10px;padding-bottom: 10px">
-                                        <a href="#" id="submit_link" class="button">فراموشی رمز عبور</a>
+                        @*<h>سامانه مدیریت اطلاعات رستوران ها</h>*@
+                        @*<div class="panel-heading">
+                    <h3 class="panel-title">Local Login</h3>
+                </div>*@
+
+                        <form name="form" method="post" action="@Model.LoginUrl" class="form col-md-12 center-block form-horizontal">
+                            <fieldset>
+                                <input type="hidden" name="@Model.AntiForgery.Name" value="@Model.AntiForgery.Value" />
+
+                                <div class="form-group login-user">
+                                    <div class="user-password-style">
+                                        <i class="fa fa-user fa-fw" aria-hidden="true"></i>
+                                        @*<label for="username">UserName</label>*@
+                                        <input required name="username" autofocus id="username" type="text" ng-model="model.username" class="form-control" placeholder="نام کاربری" value="@Model.Username" maxlength="100" @(ViewBag.DisableUserNameChange == true ? "readonly='readonly'" : "")>
+
                                     </div>
                                 </div>
-                                @*<a href="@Url.Action("RecoverCode", "RecoverPassword", new { Username = Model.Username})">فراموشی رمز عبور</a>*@
-                                @*<a href="/RecoverPassword/RecoverCode">فراموشی رمز عبور</a>*@
 
-                                @*<ul class="list-unstyled">
-                                        @if (Model.AdditionalLinks != null)
-                                        {
-                                            foreach (var link in Model.AdditionalLinks)
-                                            {
-                                                <li><a href="@link.Href" id="@link.Text.Replace(" ", "")">@link.Text</a></li>
-                                            }
-                                        }
-                                    </ul>*@
+                                <div class="form-group login-password">
+                                    <div class="user-password-style">
+                                        <i class="fa fa-lock fa-fw" aria-hidden="true"></i>
+                                        @*<label for="password">Password</label>*@
+                                        <input required id="password" name="password" type="password" class="form-control text-left left-to-right" placeholder="رمز عبور" ng-model="model.password" maxlength="100" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-xs-12">
+                                        <div class="div-center">
+                                            <div class="divCaptchaContiner">
+                                                <img src="@Url.Action("GenerateCaptcha", "MvcCaptcha")" , alt="Captcha Code" class="img-thumbnail" id="captchaImageID" />
+                                                <img src="~/Content/images/refresh.png" class="divRefreshContainer" id="imgRefreshId" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.TextBox("CaptchaUserInput", null, new
+                                       {
+                                           @class = "form-control item-margin",
+                                           required = "",
+                                           type = "text",
+                                           placeholder = "تصویر امنیتی",
+                                           autocomplete = "off"
+                                       })
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @if (Model.AllowRememberMe)
+                                {
+                                    <div class="form-group">
+                                        <label for="rememberMe">
+                                            <input type="checkbox" id="rememberMe" name="rememberMe" @(Model.RememberMe ? "checked='checked'" : "") value="true">
+                                            <strong>مرا به خاطر بسپار</strong>
+                                        </label>
+                                    </div>
+                                }
+
+
+                                <div class="form-group login-submit">
+                                    <button class="btn btn-primary btn-default btn-block" id="login" ng-disabled="form.$invalid">ورود به سایت</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                        <div class="form-group">
+                            <div class="col-lg-12" style="padding-top: 10px;padding-bottom: 10px">
+                                <a href="#" id="submit_link" class="button">فراموشی رمز عبور</a>
                             </div>
                         </div>
-                    @*</div>*@
+                        @*<a href="@Url.Action("RecoverCode", "RecoverPassword", new { Username = Model.Username})">فراموشی رمز عبور</a>*@
+                        @*<a href="/RecoverPassword/RecoverCode">فراموشی رمز عبور</a>*@
 
-                }
+                        @*<ul class="list-unstyled">
+                    @if (Model.AdditionalLinks != null)
+                    {
+                        foreach (var link in Model.AdditionalLinks)
+                        {
+                            <li><a href="@link.Href" id="@link.Text.Replace(" ", "")">@link.Text</a></li>
+                        }
+                    }
+                </ul>*@
+                    }
+                    </div>
+                </div>
+                @*</div>*@
+
+           
 
 
                 @if (Model.ExternalProviders != null && Model.ExternalProviders.Any())
