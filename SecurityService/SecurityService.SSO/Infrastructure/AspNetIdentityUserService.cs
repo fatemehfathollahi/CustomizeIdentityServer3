@@ -309,8 +309,13 @@ namespace SecurityService.SSO.Infrastructure
                     }
                     else if (userManager.SupportsUserLockout)
                     {
+                        ctx.AuthenticateResult = new AuthenticateResult("نام کاربری یا رمز عبور اشتباه می باشد.");
                         await userManager.AccessFailedAsync(user.Id);
                     }
+                }
+                else
+                {
+                    ctx.AuthenticateResult = new AuthenticateResult("نام کاربری یا رمز عبور اشتباه می باشد.");
                 }
             }
         }
