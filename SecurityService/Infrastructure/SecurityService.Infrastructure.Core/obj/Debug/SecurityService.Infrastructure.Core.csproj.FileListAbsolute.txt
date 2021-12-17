@@ -82,3 +82,17 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\SecurityService.Infrastructure.Core.dll.config
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\SecurityService.Infrastructure.Core.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\SecurityService.Infrastructure.Core.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.xml
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csprojAssemblyReference.cache
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csproj.CoreCompileInputs.cache
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.csproj.CopyComplete
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\SecurityService\Infrastructure\SecurityService.Infrastructure.Core\obj\Debug\SecurityService.Infrastructure.Core.pdb

@@ -76,3 +76,16 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.S
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.ServiceLocator.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.ServiceLocator.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Core.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Windsor.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.Contracts.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Framework.Core.Contracts.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Core.xml
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\bin\Debug\Castle.Windsor.xml
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csprojAssemblyReference.cache
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csproj.CoreCompileInputs.cache
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.csproj.CopyComplete
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.ServiceLocator\obj\Debug\Framework.Core.ServiceLocator.pdb

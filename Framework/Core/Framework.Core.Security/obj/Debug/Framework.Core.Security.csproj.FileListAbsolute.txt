@@ -52,3 +52,12 @@ C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.S
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.csproj.CopyComplete
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.dll
 C:\Users\fathollahi\source\repos\DaNaManagement2\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\bin\Debug\Framework.Core.Security.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\bin\Debug\Framework.Core.Security.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\bin\Debug\Framework.Core.Contracts.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\bin\Debug\Framework.Core.Contracts.pdb
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.csprojAssemblyReference.cache
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.csproj.CoreCompileInputs.cache
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.csproj.CopyComplete
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.dll
+C:\Users\Fathollahi\source\reposFinal\DaNaManagement\Framework\Core\Framework.Core.Security\obj\Debug\Framework.Core.Security.pdb
